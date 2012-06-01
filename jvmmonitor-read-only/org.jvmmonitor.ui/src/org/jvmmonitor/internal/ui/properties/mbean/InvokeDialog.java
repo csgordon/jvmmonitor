@@ -415,7 +415,7 @@ public class InvokeDialog extends Dialog {
      * @param message
      *            The message
      */
-    @AlwaysSafe void setMessage(final String message) {
+    @SafeEffect void setMessage(final String message) {
         Display.getDefault().asyncExec(new @UI Runnable() {
             @Override
             public void run() {

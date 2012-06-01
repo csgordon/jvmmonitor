@@ -89,7 +89,7 @@ public class MBeanSashForm extends AbstractSashForm {
      * Refreshes the appearance.
      */
     protected void refresh() {
-        new @UI RefreshJob(Messages.refreshMBeanSectionJobLabel,
+        new RefreshJob(Messages.refreshMBeanSectionJobLabel,
                 toString()) {
 
             @Override
@@ -101,7 +101,7 @@ public class MBeanSashForm extends AbstractSashForm {
             }
 
             @Override
-            protected void refreshUI() {
+            @UIEffect protected void refreshUI() {
                 if (mBeanViewer.getControl().isDisposed()
                         || mBeanTabFolder.isDisposed()) {
                     return;

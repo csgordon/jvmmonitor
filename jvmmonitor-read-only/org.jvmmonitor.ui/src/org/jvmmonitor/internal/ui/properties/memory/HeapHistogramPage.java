@@ -214,7 +214,7 @@ public class HeapHistogramPage extends Composite implements
 
         final boolean isVisible = isVisible();
 
-        new @UI RefreshJob(NLS.bind(Messages.refreshMemorySectionJobLabel, section
+        new RefreshJob(NLS.bind(Messages.refreshMemorySectionJobLabel, section
                 .getJvm().getPid()), getId()) {
             @Override
             protected void refreshModel(IProgressMonitor monitor) {
@@ -233,7 +233,7 @@ public class HeapHistogramPage extends Composite implements
             }
 
             @Override
-            protected void refreshUI() {
+            @UIEffect protected void refreshUI() {
                 IActiveJvm jvm = section.getJvm();
                 boolean isConnected = jvm != null && jvm.isConnected();
                 boolean isRemote = jvm != null && jvm.isRemote();
@@ -369,7 +369,7 @@ public class HeapHistogramPage extends Composite implements
      * 
      * @return <tt>true</tt> if heap histogram is supported
      */
-    boolean isSupported() {
+    @SafeEffect boolean isSupported() {
         IActiveJvm jvm = section.getJvm();
         if (jvm == null) {
             return false;
