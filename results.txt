@@ -38,3 +38,5 @@ need to keep this in mind if I find a "bug" in a property change listener.
 +15 of actual work (3:00), 57.  Spent a lot of time staring at things and discovered Action is NOT a
 polymorphic interface!  It's all safe, and all the setText() calls I was seeing in Action bodies is
 just safe bookkeeping, not UI calls.
+
++45 (3:45), 51.  This includes reversing a lot of incorrect annotations, like making the safe half of a RefreshJob marked safe, and making Action monomorphic (it's always a UI thread thing).
