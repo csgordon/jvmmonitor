@@ -36,7 +36,7 @@ public class ClearTimelineDataAction extends AbstractClearAction {
      * @see AbstractClearAction#doRun(IProgressMonitor)
      */
     @Override
-    protected IStatus doRun(IProgressMonitor monitor) {
+    @SafeEffect protected IStatus doRun(IProgressMonitor monitor) {
         timelineSection.clear();
         return Status.OK_STATUS;
     }

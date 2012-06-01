@@ -206,7 +206,7 @@ abstract public class AbstractJvmPropertySection extends
      * @see IJvmModelChangeListener#jvmModelChanged(JvmModelEvent)
      */
     @Override
-    public void jvmModelChanged(final JvmModelEvent e) {
+    @SafeEffect public void jvmModelChanged(final JvmModelEvent e) {
         if (e.state != State.JvmModified && e.state != State.JvmConnected
                 && e.state != State.JvmDisconnected) {
             return;

@@ -39,7 +39,7 @@ import guitypes.checkers.quals.*;
  * The action to rename snapshot on JVM Explorer view.
  */
 @UIType
-@UI public class RenameAction extends @UI Action implements ISelectionChangedListener {
+public class RenameAction extends Action implements ISelectionChangedListener {
 
     /** The snapshot. */
     private ISnapshot snapshot;

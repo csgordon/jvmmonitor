@@ -31,7 +31,7 @@ import guitypes.checkers.quals.*;
  * The action to copy the selected item clipboard.
  */
 @UIType
-@UI public class CopyAction extends @UI Action implements ISelectionChangedListener {
+public class CopyAction extends Action implements ISelectionChangedListener {
 
     /** The text data to be transfered. */
     private String textData;

@@ -57,7 +57,7 @@ import guitypes.checkers.quals.*;
  * The action to dump heap as hprof file.
  */
 @UIType
-@UI public class DumpHprofAction extends @UI Action {
+public class DumpHprofAction extends Action {
 
     /** The property section. */
     AbstractJvmPropertySection section;
@@ -163,7 +163,7 @@ import guitypes.checkers.quals.*;
      * 
      * @return <tt>true</tt> if Memory Analyzer is installed
      */
-    boolean isMemoryAnalyzerInstalled() {
+    @SafeEffect boolean isMemoryAnalyzerInstalled() {
         return Platform.getBundle("org.eclipse.mat.ui") != null; //$NON-NLS-1$
     }
 

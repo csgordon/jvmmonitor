@@ -22,7 +22,7 @@ import guitypes.checkers.quals.*;
  * The action to suspend CPU profiling.
  */
 @UIType
-@UI public class SuspendCpuProfilingAction extends @UI Action {
+public class SuspendCpuProfilingAction extends Action {
 
     /** The property section. */
     AbstractJvmPropertySection section;

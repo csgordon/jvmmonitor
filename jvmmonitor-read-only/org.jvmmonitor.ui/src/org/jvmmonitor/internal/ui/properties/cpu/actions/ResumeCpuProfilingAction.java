@@ -23,7 +23,7 @@ import guitypes.checkers.quals.*;
  * The action to resume CPU profiling.
  */
 @UIType
-@UI public class ResumeCpuProfilingAction extends @UI Action {
+public class ResumeCpuProfilingAction extends Action {
 
     /** The property section. */
     AbstractJvmPropertySection section;

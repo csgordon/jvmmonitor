@@ -24,7 +24,7 @@ import guitypes.checkers.quals.*;
  * The action to dump heap.
  */
 @UIType
-@UI public class DumpHeapAction extends @UI Action {
+public class DumpHeapAction extends Action {
 
     /** The property section. */
     AbstractJvmPropertySection section;

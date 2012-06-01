@@ -19,7 +19,7 @@ import guitypes.checkers.quals.*;
  * The action to delete chart.
  */
 @UIType
-@UI public class DeleteChartAction extends @UI Action {
+public class DeleteChartAction extends Action {
 
     /** The timeline chart. */
     private TimelineChart chart;

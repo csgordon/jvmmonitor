@@ -6,10 +6,8 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
-      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120601.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -28,30 +26,33 @@ public class Activator extends AbstractUIPlugin {
                                                                     ^
   found   : @AlwaysSafe Class<? extends @AlwaysSafe Object>
   required: @AlwaysSafe Class<@AlwaysSafe Object>
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/RefreshJob.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        refreshModel(monitor);
-                    ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/AbstractDumpEditor.java:192: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceChangeListener.resourceChanged(org.eclipse.core.resources.IResourceChangeEvent)).
-        public void resourceChanged(IResourceChangeEvent event) {
-                    ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/AbstractDumpEditor.java:194: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+            if (delta != null && searchFile(delta)) {
+                                           ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/AbstractDumpEditor.java:196: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+                        .getWorkbenchWindows()) {
+                                            ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/AbstractDumpEditor.java:195: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+                for (IWorkbenchWindow window : PlatformUI.getWorkbench()
+                                                                      ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/AbstractDumpEditor.java:197: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+                    for (final IWorkbenchPage page : window.getPages()) {
+                                                                    ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/HeapHistogramPage.java:170: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IPropertyChangeListener.propertyChange(org.eclipse.jface.util.PropertyChangeEvent)).
     public void propertyChange(PropertyChangeEvent event) {
                 ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/DumpHprofAction.java:151: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                if (isMemoryAnalyzerInstalled() && fileStore != null) {
-                                             ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/AbstractJvmPropertySection.java:209: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IJvmModelChangeListener.jvmModelChanged(org.jvmmonitor.core.JvmModelEvent)).
-    public void jvmModelChanged(final JvmModelEvent e) {
-                ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/HeapHistogramPage.java:220: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.RefreshJob.refreshModel(org.eclipse.core.runtime.IProgressMonitor)).
+            protected void refreshModel(IProgressMonitor monitor) {
+                           ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/AbstractJvmPropertySection.java:216: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+        if (!isSectionActivated && !propertySheet.isPinned()) {
+                                                          ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/SWTResourcesPage.java:146: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.RefreshJob.refreshModel(org.eclipse.core.runtime.IProgressMonitor)).
+            protected void refreshModel(IProgressMonitor monitor) {
+                           ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/AbstractSashForm.java:79: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ISashForm.setOrientation(org.jvmmonitor.internal.ui.actions.ToggleOrientationAction.Orientation)).
     public void setOrientation(Orientation orientation) {
                 ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:128: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IPropertyChangeListener.propertyChange(org.eclipse.jface.util.PropertyChangeEvent)).
-    @SafeEffect public void propertyChange(PropertyChangeEvent event) {
-                            ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:130: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                || getViewer().getTree().isDisposed()) {
-                                                   ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:130: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                 || getViewer().getTree().isDisposed()) {
                                       ^
@@ -70,24 +71,18 @@ public class Activator extends AbstractUIPlugin {
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/CpuDumpEditor.java:139: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ICpuModelChangeListener.modelChanged(org.jvmmonitor.core.cpu.CpuModelEvent)).
             @UIEffect public void modelChanged(CpuModelEvent event) {
                                   ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/overview/OverviewSection.java:287: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            super(section);
-                 ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/overview/OverviewLabelProvider.java:16: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class OverviewLabelProvider extends LabelProvider implements
-       ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/overview/OverviewSection.java:140: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.RefreshJob.refreshModel(org.eclipse.core.runtime.IProgressMonitor)).
+            protected void refreshModel(IProgressMonitor monitor) {
+                           ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadsSection.java:72: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.RefreshJob.refreshModel(org.eclipse.core.runtime.IProgressMonitor)).
+            protected void refreshModel(IProgressMonitor monitor) {
+                           ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadFilteredTree.java:117: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IPropertyChangeListener.propertyChange(org.eclipse.jface.util.PropertyChangeEvent)).
     public void propertyChange(PropertyChangeEvent event) {
                 ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/TimelineChart.java:100: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IPropertyChangeListener.propertyChange(org.eclipse.jface.util.PropertyChangeEvent)).
     public void propertyChange(PropertyChangeEvent event) {
                 ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/actions/AbstractClearAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                return doRun(monitor);
-                            ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/NewChartAction.java:120: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            super(shell, "", null, new ArrayList<MBeanAttribute>(), jvm, true); //$NON-NLS-1$
-                 ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/AttributeSelectionDialog.java:202: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                         .getSelection();
                                      ^
@@ -118,24 +113,36 @@ public class OverviewLabelProvider extends LabelProvider implements
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/CallerCalleeTabPage.java:95: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ICpuModelChangeListener.modelChanged(org.jvmmonitor.core.cpu.CpuModelEvent)).
             @UIEffect public void modelChanged(CpuModelEvent event) {
                                   ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/CallTreeFilteredTree.java:32: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        super(parent, actionBars);
-             ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/actions/ClearCpuProfilingDataAction.java:40: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.actions.AbstractClearAction.doRun(org.eclipse.core.runtime.IProgressMonitor)).
+    protected IStatus doRun(IProgressMonitor monitor) {
+                      ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/PackageLabelProvider.java:17: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 public class PackageLabelProvider extends LabelProvider {
        ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/actions/ConfigureCpuProfilerAction.java:118: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                 return doConfigure(monitor, dialog);
                                   ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/AttributesTab.java:233: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+                        && !section.isRefreshSuspended()) {
+                                                      ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/AttributesTab.java:351: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+                                adjustedValue = getNumber(node.getValue()
+                                                         ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/NotificationFilteredTree.java:152: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IPropertyChangeListener.propertyChange(org.eclipse.jface.util.PropertyChangeEvent)).
     public void propertyChange(PropertyChangeEvent event) {
                 ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/NotificationsTab.java:151: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.RefreshJob.refreshModel(org.eclipse.core.runtime.IProgressMonitor)).
+            protected void refreshModel(IProgressMonitor monitor) {
+                           ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/SubscribeAction.java:76: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                 setEnabled(enabled);
                           ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/SubscribeAction.java:78: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                     setChecked(jvm.getMBeanServer().getMBeanNotification()
                               ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/MBeanSashForm.java:96: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.RefreshJob.refreshModel(org.eclipse.core.runtime.IProgressMonitor)).
+            protected void refreshModel(IProgressMonitor monitor) {
+                           ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/OperationsContentProvider.java:16: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 public class OperationsContentProvider extends ArrayContentProvider {
        ^
@@ -154,19 +161,12 @@ public class OperationsContentProvider extends ArrayContentProvider {
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/InvokeDialog.java:481: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                 setMessage(NLS.bind(Messages.mBeanOperationSucceededLabel,
                           ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/views/DeleteAction.java:75: error: incompatible types.
-        actionBars.setGlobalActionHandler(ActionFactory.DELETE.getId(), this);
-                                                                        ^
-  found   : @UI DeleteAction
-  required: @AlwaysSafe IAction
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/views/RenameAction.java:62: error: incompatible types.
-        actionBars.setGlobalActionHandler(ActionFactory.RENAME.getId(), this);
-                                                                        ^
-  found   : @UI RenameAction
-  required: @AlwaysSafe IAction
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/views/JvmTreeViewer.java:131: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IJvmModelChangeListener.jvmModelChanged(org.jvmmonitor.core.JvmModelEvent)).
     public void jvmModelChanged(final JvmModelEvent e) {
                 ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/views/JvmTreeViewer.java:294: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+                element = selection.getFirstElement();
+                                                   ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/views/StartMonitoringAction.java:109: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                     if (!jvm.isConnected() && isEnabled()) {
                                                        ^
@@ -185,10 +185,4 @@ public class Activator extends AbstractUIPlugin {
 ./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:108: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         IDialogSettings settings = getDialogSettings();
                                                     ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:109: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        IDialogSettings section = settings.getSection(sectionName);
-                                                     ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:111: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            section = settings.addNewSection(sectionName);
-                                            ^
 57 errors

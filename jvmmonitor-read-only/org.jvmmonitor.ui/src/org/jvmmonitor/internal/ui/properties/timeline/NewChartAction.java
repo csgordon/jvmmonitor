@@ -31,7 +31,7 @@ import guitypes.checkers.quals.*;
  * The action to create a new chart.
  */
 @UIType
-@UI public class NewChartAction extends @UI Action {
+public class NewChartAction extends Action {
 
     /** The property section. */
     AbstractJvmPropertySection section;
@@ -106,6 +106,7 @@ import guitypes.checkers.quals.*;
     /**
      * The dialog to create a new chart.
      */
+    @UIType
     private static class NewChartDialog extends ConfigureChartDialog {
 
         /**

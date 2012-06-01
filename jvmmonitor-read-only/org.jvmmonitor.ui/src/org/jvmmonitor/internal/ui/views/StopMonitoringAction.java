@@ -26,7 +26,7 @@ import guitypes.checkers.quals.*;
  * The action to stop monitoring JVM.
  */
 @UIType
-@UI public class StopMonitoringAction extends @UI Action implements
+public class StopMonitoringAction extends Action implements
         ISelectionChangedListener {
 
     /** The active JVMs. */

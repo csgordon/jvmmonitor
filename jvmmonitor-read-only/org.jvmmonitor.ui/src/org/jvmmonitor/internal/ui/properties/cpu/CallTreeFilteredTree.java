@@ -14,10 +14,12 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.ui.IActionBars;
+import guitypes.checkers.quals.*;
 
 /**
  * The call tree filtered tree.
  */
+@UIType
 public class CallTreeFilteredTree extends AbstractFilteredTree {
 
     /**

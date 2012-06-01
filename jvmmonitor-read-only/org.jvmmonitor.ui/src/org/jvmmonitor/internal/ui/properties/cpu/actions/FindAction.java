@@ -15,7 +15,7 @@ import guitypes.checkers.quals.*;
  * The action to find tree item.
  */
 @UIType
-@UI public class FindAction extends @UI Action {
+public class FindAction extends Action {
 
     /** The tree viewer. */
     private TreeViewer viewer;

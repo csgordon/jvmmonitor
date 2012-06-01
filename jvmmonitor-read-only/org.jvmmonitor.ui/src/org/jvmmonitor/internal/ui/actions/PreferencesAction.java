@@ -17,7 +17,7 @@ import guitypes.checkers.quals.*;
  * The action to open preference dialog.
  */
 @UIType
-@UI public class PreferencesAction extends @UI Action {
+public class PreferencesAction extends Action {
 
     /** The preference dialog (keep reference for testing). */
     private PreferenceDialog dialog;

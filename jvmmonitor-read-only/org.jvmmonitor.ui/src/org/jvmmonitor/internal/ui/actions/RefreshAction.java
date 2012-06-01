@@ -18,7 +18,7 @@ import guitypes.checkers.quals.*;
  * The action to refresh property section.
  */
 @UIType
-@UI public class RefreshAction extends @UI Action {
+public class RefreshAction extends Action {
 
     /** The property section. */
     private AbstractJvmPropertySection section;

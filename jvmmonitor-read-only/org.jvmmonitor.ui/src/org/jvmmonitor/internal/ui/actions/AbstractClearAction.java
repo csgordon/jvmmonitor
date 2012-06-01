@@ -18,7 +18,7 @@ import guitypes.checkers.quals.*;
  * The abstract class for clear action.
  */
 @UIType
-@UI abstract public class AbstractClearAction extends @UI Action {
+abstract public class AbstractClearAction extends Action {
 
     /**
      * The constructor.
@@ -51,7 +51,7 @@ import guitypes.checkers.quals.*;
      *            The progress monitor
      * @return The status
      */
-    abstract protected IStatus doRun(IProgressMonitor monitor);
+    @SafeEffect abstract protected IStatus doRun(IProgressMonitor monitor);
 
     /**
      * Gets the job name.

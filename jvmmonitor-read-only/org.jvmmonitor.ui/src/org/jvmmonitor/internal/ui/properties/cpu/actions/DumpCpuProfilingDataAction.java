@@ -24,7 +24,7 @@ import guitypes.checkers.quals.*;
  * Dumps the CPU profiling data.
  */
 @UIType
-@UI public class DumpCpuProfilingDataAction extends @UI Action {
+public class DumpCpuProfilingDataAction extends Action {
 
     /** The property section. */
     AbstractJvmPropertySection section;

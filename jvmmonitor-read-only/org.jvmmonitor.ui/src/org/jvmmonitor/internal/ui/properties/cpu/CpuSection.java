@@ -150,8 +150,8 @@ public class CpuSection extends AbstractJvmPropertySection {
      * @param initConfig
      *            <tt>true</tt> to initialize configuration.
      */
-    private void refresh(final boolean initConfig) {
-        new @UI RefreshJob(NLS.bind(Messages.refeshCpuSectionJobLabel, getJvm()
+    @SafeEffect private void refresh(final boolean initConfig) {
+        new RefreshJob(NLS.bind(Messages.refeshCpuSectionJobLabel, getJvm()
                 .getPid()), toString()) {
 
             private boolean isCpuProfilerReady;
@@ -184,7 +184,7 @@ public class CpuSection extends AbstractJvmPropertySection {
             }
 
             @Override
-            protected void refreshUI() {
+            @UIEffect protected void refreshUI() {
                 IActiveJvm jvm = getJvm();
                 boolean isConnected = jvm != null && jvm.isConnected();
                 updatePage(isPackageSpecified);
@@ -212,7 +212,7 @@ public class CpuSection extends AbstractJvmPropertySection {
      * @see AbstractJvmPropertySection#jvmModelChanged(JvmModelEvent)
      */
     @Override
-    public void jvmModelChanged(JvmModelEvent event) {
+    @SafeEffect public void jvmModelChanged(JvmModelEvent event) {
         super.jvmModelChanged(event);
 
         IActiveJvm jvm = getJvm();
@@ -385,7 +385,7 @@ public class CpuSection extends AbstractJvmPropertySection {
     /**
      * Sets the profiled packages to CPU profiler.
      */
-    void setProfiledPackages() {
+    @SafeEffect void setProfiledPackages() {
         IActiveJvm jvm = getJvm();
         if (jvm == null) {
             return;
@@ -413,7 +413,7 @@ public class CpuSection extends AbstractJvmPropertySection {
     /**
      * Sets the profiler sampling period.
      */
-    void setProfilerSamplingPeriod() {
+    @SafeEffect void setProfilerSamplingPeriod() {
         IActiveJvm jvm = getJvm();
         if (jvm == null) {
             return;
@@ -439,7 +439,7 @@ public class CpuSection extends AbstractJvmPropertySection {
     /**
      * Sets the profiler type.
      */
-    void setProfilerType() {
+    @SafeEffect void setProfilerType() {
         IActiveJvm jvm = getJvm();
         if (jvm == null) {
             return;
@@ -469,7 +469,7 @@ public class CpuSection extends AbstractJvmPropertySection {
      * 
      * @return True if CPU profiler is ready
      */
-    boolean isCpuProfilerReady() {
+    @SafeEffect boolean isCpuProfilerReady() {
         IActiveJvm jvm = getJvm();
         return jvm != null
                 && jvm.isConnected()
@@ -482,7 +482,7 @@ public class CpuSection extends AbstractJvmPropertySection {
      * 
      * @return True if CPU profiler is running
      */
-    boolean isCpuProfilerRunning() {
+    @SafeEffect boolean isCpuProfilerRunning() {
         IActiveJvm jvm = getJvm();
         return jvm != null && jvm.isConnected()
                 && jvm.getCpuProfiler().getState() == ProfilerState.RUNNING;
@@ -493,7 +493,7 @@ public class CpuSection extends AbstractJvmPropertySection {
      * 
      * @return True if the profiled packages are specified
      */
-    boolean isPackageSpecified() {
+    @SafeEffect boolean isPackageSpecified() {
         IActiveJvm jvm = getJvm();
         if (jvm == null
                 || jvm.getCpuProfiler().getState() == ProfilerState.AGENT_NOT_LOADED) {
