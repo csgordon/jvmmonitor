@@ -1,0 +1,40 @@
+jvmmonitor: http://code.google.com/a/eclipselabs.org/p/jvmmonitor/source/checkout
+http://www.jvmmonitor.org/index.html
+
+Checkout: svn checkout http://svn.codespot.com/a/eclipselabs.org/jvmmonitor/trunk/ jvmmonitor-read-only
+Got revision 53
+
+NEED TO ANNOTATE SWTCHART JAR!!!
+
+*2342* errors initially (with no SWTChart stubs), possibly including checker bugs and overly conservative annotations.
+Started annotation 12:15pm 5/17
+Each @UIType annotation seems to fix around 40 errors.  Sometimes 20, sometimes 60.  Once, 107.
+After 1:15:00 (hour and 15 minutes, 1:30pm 5/17) down to *704* errors, mostly adding @UIType
+annotations to subtypes of JFace and SWT classes, and adding @UI to Runnable and Action.
+The bulk of time spent is waiting for the checker to run: it's a ton of code!
+15 more minutes of work after a short break: *552*
+15 more minutes: *422* after semiautomatically doing the @UIType @UI @UIEffect-ctor transformation for remaining actions
+---(now a total of 1 hour 45 minutes)---
+15 more (2 hours total): *290*
++15 (2:15): *154*
+
+One of my most common mistakes is not adding the required import statement.
+Second most common is probably forgetting to add @UIEffect to a @UIType's constructor
+
++15 (2:30): *102*
++15 (2:45): *70* one of which may actually be a bug
+(at this point I added the warnings about invalid overrides of polymorphic methods with the false
+positives, which pushes the total up to 120.  I suspect a few of those 50 new warnings are
+legitimate, but most are probably false positives due to the supertype annotation bug)
+
+Have just annotated org.eclipse.jface.preference.IPreferenceStore, which allows property change
+listeners to be registered.  Those listeners are fired on the same thread that updates the relevant
+property.  As long as the only thread that updates properties with UI listeners is the UI thread,
+all is well.  But typing that is a nightmare, because it would require giving a type with a
+key->effect map in it.  This doesn't seem problematic in practice, but it's worth noting that by
+requiring all of the listeners to be Safe, it is potentially too conservative for some uses.  I also
+need to keep this in mind if I find a "bug" in a property change listener.
+
++15 of actual work (3:00), 57.  Spent a lot of time staring at things and discovered Action is NOT a
+polymorphic interface!  It's all safe, and all the setText() calls I was seeing in Action bodies is
+just safe bookkeeping, not UI calls.
