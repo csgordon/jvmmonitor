@@ -17,7 +17,7 @@ import guitypes.checkers.quals.*;
  * The action to collapse all tree nodes.
  */
 @UIType
-@UI public class CollapseAllAction extends @UI Action {
+public class CollapseAllAction extends Action {
 
     /** The tree viewer. */
     private TreeViewer viewer;

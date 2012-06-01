@@ -112,7 +112,7 @@ abstract public class RefreshJob extends Job {
      * @param monitor
      *            The progress monitor
      */
-    @UIEffect protected void refreshModel(IProgressMonitor monitor) {
+    protected void refreshModel(IProgressMonitor monitor) {
         // do nothing
     }
 

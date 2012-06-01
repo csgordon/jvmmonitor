@@ -26,7 +26,7 @@ import guitypes.checkers.quals.*;
  * The action to subscribe notification.
  */
 @UIType
-@UI public class SubscribeAction extends @UI Action {
+public class SubscribeAction extends Action {
 
     /** The object name. */
     ObjectName objectName;

@@ -23,7 +23,7 @@ import guitypes.checkers.quals.*;
  * The action to invoke MBean method.
  */
 @UIType
-@UI public class InvokeAction extends @UI Action implements ISelectionChangedListener {
+public class InvokeAction extends Action implements ISelectionChangedListener {
 
     /** The object name. */
     private ObjectName objectName;

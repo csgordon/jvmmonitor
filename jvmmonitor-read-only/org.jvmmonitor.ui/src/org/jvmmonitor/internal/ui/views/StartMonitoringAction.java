@@ -39,7 +39,7 @@ import guitypes.checkers.quals.*;
  * The action to start monitoring JVM.
  */
 @UIType
-@UI public class StartMonitoringAction extends @UI Action implements
+public class StartMonitoringAction extends Action implements
         ISelectionChangedListener {
 
     /** The active JVMs. */

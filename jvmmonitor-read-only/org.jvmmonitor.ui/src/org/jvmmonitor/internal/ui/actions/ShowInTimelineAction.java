@@ -36,7 +36,7 @@ import guitypes.checkers.quals.*;
  * The action to show in timeline tab.
  */
 @UIType
-@UI abstract public class ShowInTimelineAction extends @UI Action implements
+abstract public class ShowInTimelineAction extends Action implements
         ISelectionChangedListener {
 
     /** The selected attributes. */

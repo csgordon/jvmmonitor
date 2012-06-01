@@ -189,7 +189,7 @@ abstract public class AbstractDumpEditor extends MultiPageEditorPart {
          * @see IResourceChangeListener#resourceChanged(IResourceChangeEvent)
          */
         @Override
-        public void resourceChanged(IResourceChangeEvent event) {
+        @SafeEffect public void resourceChanged(IResourceChangeEvent event) {
             IResourceDelta delta = event.getDelta();
             if (delta != null && searchFile(delta)) {
                 for (IWorkbenchWindow window : PlatformUI.getWorkbench()

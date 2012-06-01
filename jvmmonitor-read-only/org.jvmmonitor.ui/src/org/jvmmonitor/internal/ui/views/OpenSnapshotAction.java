@@ -27,7 +27,7 @@ import guitypes.checkers.quals.*;
  * The action to open snapshot.
  */
 @UIType
-@UI public class OpenSnapshotAction extends @UI Action implements
+public class OpenSnapshotAction extends Action implements
         ISelectionChangedListener {
 
     /** The snapshots. */

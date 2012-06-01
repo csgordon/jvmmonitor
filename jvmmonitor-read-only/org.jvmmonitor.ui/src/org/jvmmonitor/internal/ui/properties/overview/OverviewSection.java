@@ -275,6 +275,7 @@ public class OverviewSection extends AbstractJvmPropertySection {
     /**
      * The action to show the attribute in timeline.
      */
+    @UIType
     private static class MyShowInTimelineAction extends ShowInTimelineAction {
 
         /**

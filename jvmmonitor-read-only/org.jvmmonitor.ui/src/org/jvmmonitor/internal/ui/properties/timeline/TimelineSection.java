@@ -143,7 +143,7 @@ public class TimelineSection extends AbstractJvmPropertySection {
      * @see AbstractJvmPropertySection#jvmModelChanged(JvmModelEvent)
      */
     @Override
-    public void jvmModelChanged(JvmModelEvent event) {
+    @SafeEffect public void jvmModelChanged(JvmModelEvent event) {
         super.jvmModelChanged(event);
 
         if (event.state == State.JvmConnected && !chartsPage.isDisposed()) {
@@ -277,7 +277,7 @@ public class TimelineSection extends AbstractJvmPropertySection {
     /**
      * Clears the monitored attributes.
      */
-    protected void clear() {
+    @SafeEffect protected void clear() {
         IActiveJvm jvm = getJvm();
         if (jvm != null) {
             for (IMonitoredMXBeanGroup group : jvm.getMBeanServer()

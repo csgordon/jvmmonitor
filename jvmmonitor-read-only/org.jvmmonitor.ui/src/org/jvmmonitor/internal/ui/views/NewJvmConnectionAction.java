@@ -18,7 +18,7 @@ import guitypes.checkers.quals.*;
  * The action to create a new JVM connection.
  */
 @UIType
-@UI public class NewJvmConnectionAction extends @UI Action {
+public class NewJvmConnectionAction extends Action {
 
     /** The tree viewer. */
     private TreeViewer viewer;

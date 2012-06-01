@@ -26,7 +26,7 @@ import guitypes.checkers.quals.*;
  * The abstract class for action related to chart set management.
  */
 @UIType
-@UI abstract public class AbstractChartSetAction extends @UI Action implements
+abstract public class AbstractChartSetAction extends Action implements
         IConstants {
 
     /** The predefined overview chart set. */

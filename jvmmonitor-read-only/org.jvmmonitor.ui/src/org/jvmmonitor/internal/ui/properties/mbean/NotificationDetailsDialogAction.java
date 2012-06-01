@@ -18,7 +18,7 @@ import guitypes.checkers.quals.*;
  * The action to open notification details dialog.
  */
 @UIType
-@UI public class NotificationDetailsDialogAction extends @UI Action implements
+public class NotificationDetailsDialogAction extends Action implements
         ISelectionChangedListener, ISharedImages {
 
     /** The dialog. */

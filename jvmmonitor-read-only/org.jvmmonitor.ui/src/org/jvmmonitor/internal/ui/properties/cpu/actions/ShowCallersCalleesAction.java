@@ -20,7 +20,7 @@ import guitypes.checkers.quals.*;
  * The action to show the callers/callees of selected method.
  */
 @UIType
-@UI public class ShowCallersCalleesAction extends @UI Action implements
+public class ShowCallersCalleesAction extends Action implements
         ISelectionChangedListener {
 
     /** The tree viewer. */

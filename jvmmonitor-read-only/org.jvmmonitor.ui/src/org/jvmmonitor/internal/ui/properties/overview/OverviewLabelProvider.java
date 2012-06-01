@@ -9,10 +9,12 @@ package org.jvmmonitor.internal.ui.properties.overview;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.graphics.Image;
+import guitypes.checkers.quals.*;
 
 /**
  * The heap label provider.
  */
+@UIType
 public class OverviewLabelProvider extends LabelProvider implements
         ITableLabelProvider {
 

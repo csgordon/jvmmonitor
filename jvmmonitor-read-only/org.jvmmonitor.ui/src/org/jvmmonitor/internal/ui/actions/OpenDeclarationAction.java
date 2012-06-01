@@ -63,7 +63,7 @@ import guitypes.checkers.quals.*;
  * The action to open method declaration with Java editor.
  */
 @UIType
-@UI public class OpenDeclarationAction extends @UI Action implements
+public class OpenDeclarationAction extends Action implements
         ISelectionChangedListener {
 
     /** The selected class name. */

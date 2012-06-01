@@ -15,7 +15,7 @@ import guitypes.checkers.quals.*;
  * The action to configure columns.
  */
 @UIType
-@UI public class ConfigureColumnsAction extends @UI Action {
+public class ConfigureColumnsAction extends Action {
 
     /** The configurable columns. */
     private IConfigurableColumns columns;

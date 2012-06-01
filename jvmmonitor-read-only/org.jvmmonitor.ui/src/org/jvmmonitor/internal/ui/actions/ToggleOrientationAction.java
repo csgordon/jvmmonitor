@@ -16,7 +16,7 @@ import guitypes.checkers.quals.*;
  * The action to toggle orientation.
  */
 @UIType
-@UI public class ToggleOrientationAction extends @UI Action {
+public class ToggleOrientationAction extends Action {
 
     /** The dialog settings section name. */
     private static final String DIALOG_SETTINGS_NAME = "ToggleOrientationAction"; //$NON-NLS-1$

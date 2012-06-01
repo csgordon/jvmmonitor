@@ -24,7 +24,7 @@ import guitypes.checkers.quals.*;
  * The action to dump threads.
  */
 @UIType
-@UI public class DumpThreadsAction extends @UI Action {
+public class DumpThreadsAction extends Action {
 
     /** The property section. */
     AbstractJvmPropertySection section;

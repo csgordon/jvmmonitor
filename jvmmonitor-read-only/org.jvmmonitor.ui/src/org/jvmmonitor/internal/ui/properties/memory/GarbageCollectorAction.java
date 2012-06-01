@@ -22,7 +22,7 @@ import guitypes.checkers.quals.*;
  * The action to run garbage collector.
  */
 @UIType
-@UI public class GarbageCollectorAction extends @UI Action {
+public class GarbageCollectorAction extends Action {
 
     /** The property section. */
     AbstractJvmPropertySection section;

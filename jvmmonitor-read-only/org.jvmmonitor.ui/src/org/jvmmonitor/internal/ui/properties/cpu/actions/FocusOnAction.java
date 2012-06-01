@@ -18,7 +18,7 @@ import guitypes.checkers.quals.*;
  * The action to focus on frame or thread.
  */
 @UIType
-@UI public class FocusOnAction extends @UI Action {
+public class FocusOnAction extends Action {
 
     /** The selected frame node. */
     private ICallTreeNode selectedNode;

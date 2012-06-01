@@ -22,7 +22,7 @@ import guitypes.checkers.quals.*;
  * The action to clear heap delta.
  */
 @UIType
-@UI public class ClearHeapDeltaAction extends @UI Action {
+public class ClearHeapDeltaAction extends Action {
 
     /** The heap composite. */
     HeapHistogramPage heapComposite;

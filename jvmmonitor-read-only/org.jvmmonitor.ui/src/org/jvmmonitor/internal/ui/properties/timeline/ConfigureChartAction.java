@@ -28,7 +28,7 @@ import guitypes.checkers.quals.*;
  * The action to configure chart.
  */
 @UIType
-@UI public class ConfigureChartAction extends @UI Action {
+public class ConfigureChartAction extends Action {
 
     /** The chart. */
     private TimelineChart chart;

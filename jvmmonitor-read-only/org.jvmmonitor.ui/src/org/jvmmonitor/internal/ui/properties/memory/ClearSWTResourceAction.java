@@ -23,7 +23,7 @@ import guitypes.checkers.quals.*;
  * The action to clear SWT resources.
  */
 @UIType
-@UI public class ClearSWTResourceAction extends @UI Action {
+public class ClearSWTResourceAction extends Action {
 
     /** The SWT resource page. */
     SWTResourcesPage resourcePage;

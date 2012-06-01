@@ -29,7 +29,7 @@ import guitypes.checkers.quals.*;
  * The action to configure CPU profiler.
  */
 @UIType
-@UI public class ConfigureCpuProfilerAction extends @UI Action {
+public class ConfigureCpuProfilerAction extends Action {
 
     /** The Java packages that CPU profiler profiles. */
     Set<String> packages;

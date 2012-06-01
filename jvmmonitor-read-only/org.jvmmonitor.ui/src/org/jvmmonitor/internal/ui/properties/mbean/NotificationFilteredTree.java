@@ -59,7 +59,7 @@ public class NotificationFilteredTree extends FilteredTree implements
     ConfigureColumnsAction configureColumnsAction;
 
     /** The action to clear. */
-    @UI Action clearAction;
+    Action clearAction;
 
     /** The action to open details dialog. */
     NotificationDetailsDialogAction detailsAction;
@@ -351,9 +351,9 @@ public class NotificationFilteredTree extends FilteredTree implements
      */
     private void createContextMenu(IActionBars actionBars) {
         final CopyAction copyAction = CopyAction.createCopyAction(actionBars);
-        clearAction = new @UI Action(Messages.clearLabel) {
+        clearAction = new Action(Messages.clearLabel) {
             @Override
-            public void run() {
+            @UIEffect public void run() {
                 notificationsTab.clear();
             }
         };

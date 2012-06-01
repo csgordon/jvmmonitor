@@ -37,7 +37,7 @@ import guitypes.checkers.quals.*;
  * The action to delete items on JVM Explorer view.
  */
 @UIType
-@UI public class DeleteAction extends @UI Action implements ISelectionChangedListener {
+public class DeleteAction extends Action implements ISelectionChangedListener {
 
     /** The terminated JVMs. */
     private List<ITerminatedJvm> jvms;
