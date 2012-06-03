@@ -6,10 +6,8 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
-      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120603.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -52,22 +50,13 @@ Total time: 0 seconds
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/ClearTimelineDataAction.java:48: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.actions.AbstractClearAction.getJobName()).
     protected String getJobName() {
                      ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/AttributeSelectionDialog.java:202: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/ConfigureChartDialog.java:475: error: Calling a method with UIEffect effect from a context limited to PolyUIEffect effects.
                         .getSelection();
                                      ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/AttributeSelectionDialog.java:204: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/ConfigureChartDialog.java:477: error: Calling a method with UIEffect effect from a context limited to PolyUIEffect effects.
                         .getFirstElement();
                                         ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/AttributeSelectionDialog.java:206: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                    attribute.setRgb(selector.getColorValue());
-                                                           ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/ConfigureChartDialog.java:475: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                        .getSelection();
-                                     ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/ConfigureChartDialog.java:477: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                        .getFirstElement();
-                                        ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/ConfigureChartDialog.java:479: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/ConfigureChartDialog.java:479: error: Calling a method with UIEffect effect from a context limited to PolyUIEffect effects.
                     attribute.setRgb(selector.getColorValue());
                                                            ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/HotSpotsTabPage.java:83: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
@@ -85,7 +74,7 @@ Total time: 0 seconds
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/AttributesTab.java:351: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                                 adjustedValue = getNumber(node.getValue()
                                                          ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/NotificationFilteredTree.java:152: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IPropertyChangeListener.propertyChange(org.eclipse.jface.util.PropertyChangeEvent)).
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/NotificationFilteredTree.java:152: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe IPropertyChangeListener).
     public void propertyChange(PropertyChangeEvent event) {
                 ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/OperationsTab.java:158: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
@@ -97,4 +86,4 @@ Total time: 0 seconds
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/views/JvmTreeViewer.java:294: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                 element = selection.getFirstElement();
                                                    ^
-27 errors
+24 errors
