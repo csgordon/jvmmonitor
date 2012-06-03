@@ -46,3 +46,5 @@ annotations.
 +1hour (4:50), 44.  Starting to think Action is completely safe, including the run methods.
 
 Also discovered the IWorkbench.run(...) method (http://help.eclipse.org/indigo/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/IWorkbenchWindow.html#run(boolean, boolean, org.eclipse.jface.operation.IRunnableWithProgress)), which we *can't* handle propertly without at least slightly-dependent effects.
+
++10 (5:00), 30.  Mostly marked a few JFace classes as safe.  The JFace docs do a terrible job of indicating what can be called where.
