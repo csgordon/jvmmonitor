@@ -10,10 +10,11 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerComparator;
 import org.eclipse.swt.SWT;
 import org.jvmmonitor.core.cpu.IMethodNode;
-
+import guitypes.checkers.quals.*;
 /**
  * The hot spots comparator.
  */
+@UIType
 public class HotSpotsComparator extends ViewerComparator {
 
     /** The column type. */

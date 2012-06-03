@@ -9,10 +9,11 @@ package org.jvmmonitor.internal.ui.properties.mbean;
 import javax.management.MBeanOperationInfo;
 
 import org.eclipse.jface.viewers.ArrayContentProvider;
-
+import guitypes.checkers.quals.*;
 /**
  * The operations content provider.
  */
+@UIType
 public class OperationsContentProvider extends ArrayContentProvider {
 
     /** The operations. */

@@ -134,7 +134,7 @@ public class OverviewSection extends AbstractJvmPropertySection {
             return;
         }
 
-        new @UI RefreshJob(NLS.bind(Messages.refreshOverviewSectionJobLabel,
+        new RefreshJob(NLS.bind(Messages.refreshOverviewSectionJobLabel,
                 getJvm().getPid()), toString()) {
             @Override
             protected void refreshModel(IProgressMonitor monitor) {
@@ -145,7 +145,7 @@ public class OverviewSection extends AbstractJvmPropertySection {
             }
 
             @Override
-            protected void refreshUI() {
+            @UIEffect protected void refreshUI() {
                 IActiveJvm jvm = getJvm();
                 boolean isConnected = jvm != null && jvm.isConnected();
                 refreshAction.setEnabled(isConnected);
