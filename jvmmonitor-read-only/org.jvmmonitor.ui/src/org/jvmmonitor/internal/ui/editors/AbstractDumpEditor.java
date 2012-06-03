@@ -175,7 +175,6 @@ abstract public class AbstractDumpEditor extends MultiPageEditorPart {
     /**
      * The resource change listener.
      */
-    @UIType
     private class ResourceChangeListener implements IResourceChangeListener {
 
         /**

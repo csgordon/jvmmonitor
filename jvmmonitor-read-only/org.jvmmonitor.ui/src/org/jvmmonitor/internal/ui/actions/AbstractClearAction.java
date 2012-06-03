@@ -17,7 +17,6 @@ import guitypes.checkers.quals.*;
 /**
  * The abstract class for clear action.
  */
-@UIType
 abstract public class AbstractClearAction extends Action {
 
     /**
@@ -35,7 +34,7 @@ abstract public class AbstractClearAction extends Action {
      * @see Action#run()
      */
     @Override
-    public void run() {
+    @SafeEffect public void run() { // Colin Gordon: This shouldn't be necessary: working around a bug in the CHECKER. direct calls to this method (when Action.run() is UI) are treated as UI
         new Job(getJobName()) {
             @Override
             protected IStatus run(IProgressMonitor monitor) {
@@ -51,7 +50,7 @@ abstract public class AbstractClearAction extends Action {
      *            The progress monitor
      * @return The status
      */
-    @SafeEffect abstract protected IStatus doRun(IProgressMonitor monitor);
+    abstract protected IStatus doRun(IProgressMonitor monitor);
 
     /**
      * Gets the job name.

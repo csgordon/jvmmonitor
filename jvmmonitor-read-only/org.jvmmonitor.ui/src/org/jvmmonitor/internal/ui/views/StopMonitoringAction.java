@@ -84,7 +84,7 @@ public class StopMonitoringAction extends Action implements
      * @see Action#run()
      */
     @Override
-    public void run() {
+    @SafeEffect public void run() {
         RefreshJob refreshJob = new RefreshJob(Messages.stopMonitoringJobLabel,
                 UUID.randomUUID().toString()) {
 
@@ -108,7 +108,7 @@ public class StopMonitoringAction extends Action implements
     /**
      * Refreshes the enable state.
      */
-    protected void refresh() {
+    @SafeEffect protected void refresh() {
         boolean enable = true;
         for (IActiveJvm jvm : jvms) {
             if (!jvm.isConnected() || !jvm.isConnectionSupported()) {

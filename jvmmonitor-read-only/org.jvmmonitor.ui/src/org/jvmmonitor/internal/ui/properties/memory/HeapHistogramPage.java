@@ -151,7 +151,7 @@ public class HeapHistogramPage extends Composite implements
      * @see IConfigurableColumn#getId()
      */
     @Override
-    public String getId() {
+    @SafeEffect public String getId() {
         return getClass().getName();
     }
 
@@ -167,7 +167,7 @@ public class HeapHistogramPage extends Composite implements
      * @see IPropertyChangeListener#propertyChange(PropertyChangeEvent)
      */
     @Override
-    public void propertyChange(PropertyChangeEvent event) {
+    @SafeEffect public void propertyChange(PropertyChangeEvent event) {
         if (!event.getProperty().equals(getId())
                 || heapViewer.getTree().isDisposed()) {
             return;
@@ -206,7 +206,7 @@ public class HeapHistogramPage extends Composite implements
     /**
      * Refreshes the appearance.
      */
-    public void refresh() {
+    @SafeEffect public void refresh() {
         // for dump editor
         if (section == null || isDisposed()) {
             return;
@@ -466,7 +466,7 @@ public class HeapHistogramPage extends Composite implements
      * @param columnData
      *            The column order and visibility
      */
-    private void setColumns(String columnData) {
+    @SafeEffect private void setColumns(String columnData) {
         columns.clear();
         for (String column : columnData.split(",")) { //$NON-NLS-1$
             String[] elemnets = column.split("="); //$NON-NLS-1$

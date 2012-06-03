@@ -129,7 +129,7 @@ public class ConfigureCpuProfilerAction extends Action {
      *            The configuration dialog
      * @return The status
      */
-    IStatus doConfigure(IProgressMonitor monitor, ConfigurationDialog dialog) {
+    @SafeEffect IStatus doConfigure(IProgressMonitor monitor, ConfigurationDialog dialog) {
         IActiveJvm jvm = cpuSection.getJvm();
         if (jvm == null) {
             return Status.CANCEL_STATUS;

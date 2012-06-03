@@ -161,7 +161,7 @@ public class ConfigurationDialog extends SelectionDialog {
      * 
      * @return The profiler type
      */
-    protected ProfilerType getProfilerType() {
+    @SafeEffect protected ProfilerType getProfilerType() { // Colin Gordon: seems like a data race
         return profilerType;
     }
 
@@ -170,7 +170,7 @@ public class ConfigurationDialog extends SelectionDialog {
      * 
      * @return The sampling period
      */
-    protected int getSamplingPeriod() {
+    @SafeEffect protected int getSamplingPeriod() { // Colin Gordon: seems like a data race
         return samplingPeriod;
     }
 
@@ -179,7 +179,7 @@ public class ConfigurationDialog extends SelectionDialog {
      * 
      * @return The packages
      */
-    protected Set<String> getPackages() {
+    @SafeEffect protected Set<String> getPackages() { // Colin Gordon: seems like a data race
         return packages;
     }
 

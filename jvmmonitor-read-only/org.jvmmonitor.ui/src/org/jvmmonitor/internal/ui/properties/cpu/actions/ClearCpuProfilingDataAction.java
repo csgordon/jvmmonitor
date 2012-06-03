@@ -16,7 +16,6 @@ import guitypes.checkers.quals.*;
 /**
  * The action to clear CPU profiling data.
  */
-@UIType
 public class ClearCpuProfilingDataAction extends AbstractClearAction {
 
     /** The CPU section. */
@@ -37,7 +36,7 @@ public class ClearCpuProfilingDataAction extends AbstractClearAction {
      * @see AbstractClearAction#doRun(IProgressMonitor)
      */
     @Override
-    protected IStatus doRun(IProgressMonitor monitor) {
+    @SafeEffect protected IStatus doRun(IProgressMonitor monitor) {
         cpuSection.clear();
         return Status.OK_STATUS;
     }

@@ -42,3 +42,7 @@ just safe bookkeeping, not UI calls.
 +45 (3:45), 51.  This includes reversing a lot of incorrect annotations, like making the safe half of a RefreshJob marked safe, and making Action monomorphic (it's always a UI thread thing).
 +5 (3:50), 48.  Mostly marking a couple UI constructor calls and fixing misuse of the old RefreshJob
 annotations.
+
++1hour (4:50), 44.  Starting to think Action is completely safe, including the run methods.
+
+Also discovered the IWorkbench.run(...) method (http://help.eclipse.org/indigo/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/IWorkbenchWindow.html#run(boolean, boolean, org.eclipse.jface.operation.IRunnableWithProgress)), which we *can't* handle propertly without at least slightly-dependent effects.
