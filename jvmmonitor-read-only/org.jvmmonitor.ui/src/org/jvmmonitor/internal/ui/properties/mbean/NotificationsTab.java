@@ -143,7 +143,7 @@ public class NotificationsTab extends PageBook {
      * Refreshes.
      */
     protected void refresh() {
-        new @UI RefreshJob(Messages.refreshNotificationTabJobLabel, toString()) {
+        new RefreshJob(Messages.refreshNotificationTabJobLabel, toString()) {
             private boolean isSubscribed;
             private boolean isSupported;
 
@@ -162,7 +162,7 @@ public class NotificationsTab extends PageBook {
             }
 
             @Override
-            protected void refreshUI() {
+            @UIEffect protected void refreshUI() {
                 if (tree.isDisposed() || messagePage.isDisposed()) {
                     return;
                 }

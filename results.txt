@@ -40,3 +40,5 @@ polymorphic interface!  It's all safe, and all the setText() calls I was seeing 
 just safe bookkeeping, not UI calls.
 
 +45 (3:45), 51.  This includes reversing a lot of incorrect annotations, like making the safe half of a RefreshJob marked safe, and making Action monomorphic (it's always a UI thread thing).
++5 (3:50), 48.  Mostly marking a couple UI constructor calls and fixing misuse of the old RefreshJob
+annotations.

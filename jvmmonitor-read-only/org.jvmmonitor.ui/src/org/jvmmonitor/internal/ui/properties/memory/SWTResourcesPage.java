@@ -140,7 +140,7 @@ public class SWTResourcesPage extends AbstractSashForm {
     protected void refresh(final boolean force) {
         final boolean isVisible = isVisible();
 
-        new @UI RefreshJob(NLS.bind(Messages.refreshMemorySectionJobLabel, section
+        new RefreshJob(NLS.bind(Messages.refreshMemorySectionJobLabel, section
                 .getJvm().getPid()), toString()) {
             @Override
             protected void refreshModel(IProgressMonitor monitor) {
@@ -157,7 +157,7 @@ public class SWTResourcesPage extends AbstractSashForm {
             }
 
             @Override
-            protected void refreshUI() {
+            @UIEffect protected void refreshUI() {
                 IActiveJvm jvm = section.getJvm();
                 boolean isConnected = jvm != null && jvm.isConnected();
 

@@ -65,7 +65,7 @@ public class ThreadsSection extends AbstractJvmPropertySection {
             return;
         }
 
-        new @UI RefreshJob(NLS.bind(Messages.refreshThreadsSectionJobLabel,
+        new RefreshJob(NLS.bind(Messages.refreshThreadsSectionJobLabel,
                 getJvm().getPid()), toString()) {
 
             @Override
@@ -81,7 +81,7 @@ public class ThreadsSection extends AbstractJvmPropertySection {
             }
 
             @Override
-            protected void refreshUI() {
+            @UIEffect protected void refreshUI() {
                 IActiveJvm jvm = getJvm();
                 boolean isConnected = jvm != null && jvm.isConnected();
                 dumpThreadsAction.setEnabled(!hasErrorMessage());
