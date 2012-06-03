@@ -14,15 +14,6 @@ dist:
 BUILD SUCCESSFUL
 Total time: 0 seconds
 ~/research/experiments/timed/jvmmonitor/jvmmonitor-read-only
-./org.jvmmonitor.tools/src/org/jvmmonitor/tools/Activator.java:17: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class Activator extends AbstractUIPlugin {
-       ^
-./org.jvmmonitor.tools/src/org/jvmmonitor/tools/Activator.java:30: error: Calling a method with UIEffect effect from a context limited to PolyUIEffect effects.
-        super.start(context);
-                   ^
-./org.jvmmonitor.tools/src/org/jvmmonitor/tools/Activator.java:39: error: Calling a method with UIEffect effect from a context limited to PolyUIEffect effects.
-        super.stop(context);
-                  ^
 ./org.jvmmonitor.core/src/org/jvmmonitor/internal/core/MBeanServer.java:1003: error: incompatible types.
             mxBean = newPlatformMXBeanProxy(connection, mxBeanName, mxBeanClass);
                                                                     ^
@@ -43,33 +34,21 @@ public class Activator extends AbstractUIPlugin {
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/AbstractSashForm.java:79: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ISashForm.setOrientation(org.jvmmonitor.internal.ui.actions.ToggleOrientationAction.Orientation)).
     public void setOrientation(Orientation orientation) {
                 ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:130: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                || getViewer().getTree().isDisposed()) {
-                            ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:139: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         setColumns(columnsString);
                   ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:140: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         configureTree();
                      ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:141: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        getViewer().refresh();
-                 ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/CpuDumpEditor.java:139: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ICpuModelChangeListener.modelChanged(org.jvmmonitor.core.cpu.CpuModelEvent)).
             @UIEffect public void modelChanged(CpuModelEvent event) {
                                   ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadFilteredTree.java:119: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                || getViewer().getTree().isDisposed()) {
-                            ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadFilteredTree.java:128: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         setColumns(columnsString);
                   ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadFilteredTree.java:129: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         configureTree();
                      ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadFilteredTree.java:130: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        getViewer().refresh();
-                 ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/TimelineChart.java:104: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
             redraw(); // Colin Gordon: this method is definitely UI (org.eclipse.swt.widgets.Control.redraw()) but this interface is safe.  Bug, or poly interface?
                   ^
@@ -121,19 +100,10 @@ public class Activator extends AbstractUIPlugin {
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/views/JvmTreeViewer.java:294: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                 element = selection.getFirstElement();
                                                    ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:21: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class Activator extends AbstractUIPlugin {
-       ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:34: error: Calling a method with UIEffect effect from a context limited to PolyUIEffect effects.
-        super.start(context);
-                   ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:43: error: Calling a method with UIEffect effect from a context limited to PolyUIEffect effects.
-        super.stop(context);
-                  ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:65: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         return imageDescriptorFromPlugin(PLUGIN_ID, path);
                                         ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:108: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         IDialogSettings settings = getDialogSettings();
                                                     ^
-40 errors
+30 errors
