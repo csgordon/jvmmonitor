@@ -90,7 +90,7 @@ public class StartMonitoringAction extends Action implements
      * @see Action#run()
      */
     @Override
-    public void run() {
+    @SafeEffect public void run() {
         new Job(Messages.startMonitoringJobLabel) {
             @Override
             protected IStatus run(IProgressMonitor monitor) {
@@ -128,7 +128,7 @@ public class StartMonitoringAction extends Action implements
     /**
      * Refreshes the enable state.
      */
-    public void refresh() {
+    @SafeEffect public void refresh() {
         boolean enable = true;
         for (IActiveJvm jvm : jvms) {
             if (jvm.isConnected() || !jvm.isConnectionSupported()) {

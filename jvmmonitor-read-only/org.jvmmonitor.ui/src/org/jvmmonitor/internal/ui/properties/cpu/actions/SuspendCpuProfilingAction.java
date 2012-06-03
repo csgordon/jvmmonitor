@@ -21,7 +21,6 @@ import guitypes.checkers.quals.*;
 /**
  * The action to suspend CPU profiling.
  */
-@UIType
 public class SuspendCpuProfilingAction extends Action {
 
     /** The property section. */
@@ -48,7 +47,7 @@ public class SuspendCpuProfilingAction extends Action {
      * @see Action#run()
      */
     @Override
-    public void run() {
+    @SafeEffect public void run() { // Colin Gordon: This shouldn't be necessary: working around a bug in the CHECKER. direct calls to this method (when Action.run() is UI) are treated as UI
         new Job(Messages.suspendCpuProfilingJobLabel) {
             @Override
             protected IStatus run(IProgressMonitor monitor) {

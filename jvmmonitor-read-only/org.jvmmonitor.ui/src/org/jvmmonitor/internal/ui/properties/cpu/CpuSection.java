@@ -303,7 +303,7 @@ public class CpuSection extends AbstractJvmPropertySection {
     /**
      * Clears the CPU profile data.
      */
-    public void clear() {
+    @SafeEffect public void clear() {
         IActiveJvm jvm = getJvm();
         if (jvm != null) {
             try {

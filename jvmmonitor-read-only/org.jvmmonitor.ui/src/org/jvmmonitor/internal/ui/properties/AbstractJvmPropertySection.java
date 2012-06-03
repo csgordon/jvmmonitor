@@ -271,7 +271,7 @@ abstract public class AbstractJvmPropertySection extends
      * 
      * @return True if refresh is suspended
      */
-    public boolean isRefreshSuspended() {
+    @SafeEffect public boolean isRefreshSuspended() {
         return suspendRefresh;
     }
 

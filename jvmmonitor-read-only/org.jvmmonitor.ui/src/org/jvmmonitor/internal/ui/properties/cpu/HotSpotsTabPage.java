@@ -80,7 +80,7 @@ public class HotSpotsTabPage extends AbstractTabPage {
             @Override
             public void modelChanged(CpuModelEvent event) {
                 if (event.state == CpuModelState.FocusedMethodChanged) {
-                    refresh();
+                    refresh(); // Colin Gordon: transitively calls Label.setText(), so either this interface is UI or this is a bug
                 }
             }
         };

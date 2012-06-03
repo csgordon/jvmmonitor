@@ -128,7 +128,7 @@ public class JvmTreeViewer extends TreeViewer implements
      * @see IJvmModelChangeListener#jvmModelChanged(JvmModelEvent)
      */
     @Override
-    public void jvmModelChanged(final JvmModelEvent e) {
+    @SafeEffect public void jvmModelChanged(final JvmModelEvent e) {
         if (e.state == State.CpuProfilerConfigChanged) {
             return;
         }

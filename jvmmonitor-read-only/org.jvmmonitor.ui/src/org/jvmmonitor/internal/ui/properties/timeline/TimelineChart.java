@@ -97,11 +97,11 @@ public class TimelineChart extends Chart implements IPropertyChangeListener {
      * @see IPropertyChangeListener#propertyChange(PropertyChangeEvent)
      */
     @Override
-    public void propertyChange(PropertyChangeEvent event) {
+    @SafeEffect public void propertyChange(PropertyChangeEvent event) {
         if (IConstants.LEGEND_VISIBILITY.equals(event.getProperty())
                 && !isDisposed()) {
             getLegend().setVisible((Boolean) (event.getNewValue()));
-            redraw();
+            redraw(); // Colin Gordon: this method is definitely UI (org.eclipse.swt.widgets.Control.redraw()) but this interface is safe.  Bug, or poly interface?
         }
     }
 
