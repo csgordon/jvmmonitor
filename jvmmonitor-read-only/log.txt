@@ -19,9 +19,6 @@ Total time: 0 seconds
                                                                     ^
   found   : @AlwaysSafe Class<? extends @AlwaysSafe Object>
   required: @AlwaysSafe Class<@AlwaysSafe Object>
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/AbstractDumpEditor.java:217: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            IEditorInput input = AbstractDumpEditor.this.getEditorInput();
-                                                                       ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/HeapHistogramPage.java:182: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         configureTree();
                      ^
@@ -100,10 +97,4 @@ Total time: 0 seconds
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/views/JvmTreeViewer.java:294: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                 element = selection.getFirstElement();
                                                    ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:65: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        return imageDescriptorFromPlugin(PLUGIN_ID, path);
-                                        ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:108: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        IDialogSettings settings = getDialogSettings();
-                                                    ^
-30 errors
+27 errors
