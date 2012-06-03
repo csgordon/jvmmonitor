@@ -28,15 +28,9 @@ public class Activator extends AbstractUIPlugin {
                                                                     ^
   found   : @AlwaysSafe Class<? extends @AlwaysSafe Object>
   required: @AlwaysSafe Class<@AlwaysSafe Object>
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/AbstractDumpEditor.java:196: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                    for (final IWorkbenchPage page : window.getPages()) {
-                                                                    ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/AbstractDumpEditor.java:217: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
             IEditorInput input = AbstractDumpEditor.this.getEditorInput();
                                                                        ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/HeapHistogramPage.java:172: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                || heapViewer.getTree().isDisposed()) {
-                                     ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/HeapHistogramPage.java:182: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         configureTree();
                      ^
@@ -49,9 +43,6 @@ public class Activator extends AbstractUIPlugin {
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/AbstractSashForm.java:79: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ISashForm.setOrientation(org.jvmmonitor.internal.ui.actions.ToggleOrientationAction.Orientation)).
     public void setOrientation(Orientation orientation) {
                 ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:130: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                || getViewer().getTree().isDisposed()) {
-                                      ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:130: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                 || getViewer().getTree().isDisposed()) {
                             ^
@@ -67,9 +58,6 @@ public class Activator extends AbstractUIPlugin {
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/CpuDumpEditor.java:139: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ICpuModelChangeListener.modelChanged(org.jvmmonitor.core.cpu.CpuModelEvent)).
             @UIEffect public void modelChanged(CpuModelEvent event) {
                                   ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadFilteredTree.java:119: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                || getViewer().getTree().isDisposed()) {
-                                      ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadFilteredTree.java:119: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                 || getViewer().getTree().isDisposed()) {
                             ^
@@ -148,4 +136,4 @@ public class Activator extends AbstractUIPlugin {
 ./org.jvmmonitor.ui/src/org/jvmmonitor/ui/Activator.java:108: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         IDialogSettings settings = getDialogSettings();
                                                     ^
-44 errors
+40 errors
