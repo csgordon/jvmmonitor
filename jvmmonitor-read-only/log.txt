@@ -6,8 +6,10 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
+      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120604.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -56,19 +58,10 @@ Total time: 0 seconds
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/CallerCalleeTabPage.java:95: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ICpuModelChangeListener.modelChanged(org.jvmmonitor.core.cpu.CpuModelEvent)).
             @UIEffect public void modelChanged(CpuModelEvent event) {
                                   ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/AttributesTab.java:351: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                                adjustedValue = getNumber(node.getValue()
-                                                         ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/NotificationFilteredTree.java:163: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        setColumns(columnsString);
-                  ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/NotificationFilteredTree.java:164: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        configureTree();
+        configureTree(); // Colin Gordon: BUG? This makes direct calls to org.eclipse.swt.widgets.Tree.*, which are all UI methods.  Even if this interface is poly, this object registers itself with the default preferences store, which requires safe listeners.  Unless somehow they ensure the properties are only changed on the UI thread... try to reproduce this!
                      ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/OperationsTab.java:158: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                     contentProvider.refresh(operations);
                                            ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/views/JvmTreeViewer.java:294: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                element = selection.getFirstElement();
-                                                   ^
-19 errors
+16 errors
