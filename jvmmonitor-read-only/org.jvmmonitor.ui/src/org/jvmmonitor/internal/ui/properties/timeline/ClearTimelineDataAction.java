@@ -15,7 +15,6 @@ import guitypes.checkers.quals.*;
 /**
  * The action to clear timeline data.
  */
-@UIType
 public class ClearTimelineDataAction extends AbstractClearAction {
 
     /** The timeline section. */
@@ -36,7 +35,7 @@ public class ClearTimelineDataAction extends AbstractClearAction {
      * @see AbstractClearAction#doRun(IProgressMonitor)
      */
     @Override
-    @SafeEffect protected IStatus doRun(IProgressMonitor monitor) {
+    protected IStatus doRun(IProgressMonitor monitor) {
         timelineSection.clear();
         return Status.OK_STATUS;
     }

@@ -491,7 +491,7 @@ public class InvokeDialog extends Dialog {
      * @throws JMException
      * @throws IOException
      */
-    void doInvoke() throws JMException, IOException {
+    @SafeEffect void doInvoke() throws JMException, IOException {
         String operationName = info.getName();
         String[] signature = getSignature();
         Object[] params = getParams();
@@ -533,7 +533,7 @@ public class InvokeDialog extends Dialog {
      * 
      * @return The parameters
      */
-    private Object[] getParams() {
+    @SafeEffect private Object[] getParams() {
         List<Object> params = new ArrayList<Object>();
         for (final MBeanParameterInfo signature : info.getSignature()) {
             String text = getText(signature);
@@ -571,7 +571,7 @@ public class InvokeDialog extends Dialog {
      *            The signature
      * @return The text
      */
-    private String getText(final MBeanParameterInfo signature) {
+    @SafeEffect private String getText(final MBeanParameterInfo signature) {
         final String[] text = new String[1];
         Display.getDefault().syncExec(new @UI Runnable() {
             @Override
@@ -592,7 +592,7 @@ public class InvokeDialog extends Dialog {
      * 
      * @return The signature
      */
-    private String[] getSignature() {
+    @SafeEffect private String[] getSignature() {
         List<String> result = new ArrayList<String>();
         for (MBeanParameterInfo signature : info.getSignature()) {
             result.add(signature.getType());

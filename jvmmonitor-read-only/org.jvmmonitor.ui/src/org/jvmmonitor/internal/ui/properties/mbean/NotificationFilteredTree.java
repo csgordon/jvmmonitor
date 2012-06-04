@@ -133,7 +133,7 @@ public class NotificationFilteredTree extends FilteredTree implements
      * @see IConfigurableColumn#getId()
      */
     @Override
-    public String getId() {
+    @SafeEffect public String getId() {
         return getClass().getName();
     }
 
@@ -149,7 +149,7 @@ public class NotificationFilteredTree extends FilteredTree implements
      * @see IPropertyChangeListener#propertyChange(PropertyChangeEvent)
      */
     @Override
-    public void propertyChange(PropertyChangeEvent event) {
+    @SafeEffect public void propertyChange(PropertyChangeEvent event) {
         if (!event.getProperty().equals(getId())
                 || getViewer().getTree().isDisposed()) {
             return;
