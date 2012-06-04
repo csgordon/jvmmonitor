@@ -54,3 +54,4 @@ after fixing some jface annotations,
 
 +30 (5:50), 19.  mostly backtracking to mark a bunch of obviously safe methods of UITypes (e.g. containing asyncExec) as SafeEffect.
 +15 (6:05), 16.  A couple safe stubs (IStructuredSelection).  Also pretty sure I've found buggy implementations of IPropertyChangeListener.
++15 (6:20), 13.  Found a safe type (PropertySheet) and identified a few nearly-certain bugs.

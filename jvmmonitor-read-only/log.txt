@@ -20,31 +20,16 @@ Total time: 0 seconds
   found   : @AlwaysSafe Class<? extends @AlwaysSafe Object>
   required: @AlwaysSafe Class<@AlwaysSafe Object>
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/HeapHistogramPage.java:182: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        configureTree();
+        configureTree(); // Colin Gordon: BUG? This makes direct calls to org.eclipse.swt.widgets.Tree.*, which are all UI methods.  Even if this interface is poly, this object registers itself with the default preferences store, which requires safe listeners.  Unless somehow they ensure the properties are only changed on the UI thread... try to reproduce this!
                      ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/HeapHistogramPage.java:215: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        final boolean isVisible = isVisible();
+        final boolean isVisible = isVisible(); // Colin Gordon: BUG.  This method is clearly meant to be safe, but isVisible() is a widget method that throws SWTException.
                                            ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/AbstractJvmPropertySection.java:216: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        if (!isSectionActivated && !propertySheet.isPinned()) {
-                                                          ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/AbstractSashForm.java:79: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ISashForm.setOrientation(org.jvmmonitor.internal.ui.actions.ToggleOrientationAction.Orientation)).
-    public void setOrientation(Orientation orientation) {
-                ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:139: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        setColumns(columnsString);
-                  ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/AbstractFilteredTree.java:140: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        configureTree();
-                     ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/editors/CpuDumpEditor.java:139: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ICpuModelChangeListener.modelChanged(org.jvmmonitor.core.cpu.CpuModelEvent)).
             @UIEffect public void modelChanged(CpuModelEvent event) {
                                   ^
-./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadFilteredTree.java:128: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        setColumns(columnsString);
-                  ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/thread/ThreadFilteredTree.java:129: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        configureTree();
+        configureTree(); // Colin Gordon: BUG? This makes direct calls to org.eclipse.swt.widgets.Tree.*, which are all UI methods.  Even if this interface is poly, this object registers itself with the default preferences store, which requires safe listeners.  Unless somehow they ensure the properties are only changed on the UI thread... try to reproduce this!
                      ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/timeline/TimelineChart.java:104: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
             redraw(); // Colin Gordon: this method is definitely UI (org.eclipse.swt.widgets.Control.redraw()) but this interface is safe.  Bug, or poly interface?
@@ -52,16 +37,22 @@ Total time: 0 seconds
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/HotSpotsTabPage.java:83: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                     refresh(); // Colin Gordon: transitively calls Label.setText(), so either this interface is UI or this is a bug
                            ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/HotSpotsFilteredTree.java:77: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.properties.cpu.AbstractFilteredTree.configureTree()).
+    protected void configureTree() {
+                   ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/CallTreeTabPage.java:82: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                     refresh();
                            ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/CallerCalleeTabPage.java:95: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ICpuModelChangeListener.modelChanged(org.jvmmonitor.core.cpu.CpuModelEvent)).
             @UIEffect public void modelChanged(CpuModelEvent event) {
                                   ^
+./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/cpu/CallTreeFilteredTree.java:69: error: An method override may only be @UI if it overrides an @UI method (overriding org.jvmmonitor.internal.ui.properties.cpu.AbstractFilteredTree.configureTree()).
+    protected void configureTree() {
+                   ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/NotificationFilteredTree.java:164: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         configureTree(); // Colin Gordon: BUG? This makes direct calls to org.eclipse.swt.widgets.Tree.*, which are all UI methods.  Even if this interface is poly, this object registers itself with the default preferences store, which requires safe listeners.  Unless somehow they ensure the properties are only changed on the UI thread... try to reproduce this!
                      ^
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/OperationsTab.java:158: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                     contentProvider.refresh(operations);
                                            ^
-16 errors
+13 errors
