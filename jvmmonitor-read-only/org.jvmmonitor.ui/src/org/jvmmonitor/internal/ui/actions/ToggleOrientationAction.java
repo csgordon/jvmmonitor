@@ -106,7 +106,7 @@ public class ToggleOrientationAction extends Action {
     /**
      * The sash form.
      */
-    public interface ISashForm {
+    @UIType public interface ISashForm {
 
         /**
          * Sets the orientation.

@@ -179,7 +179,7 @@ public class HeapHistogramPage extends Composite implements
         }
 
         setColumns(columnsString);
-        configureTree();
+        configureTree(); // Colin Gordon: BUG? This makes direct calls to org.eclipse.swt.widgets.Tree.*, which are all UI methods.  Even if this interface is poly, this object registers itself with the default preferences store, which requires safe listeners.  Unless somehow they ensure the properties are only changed on the UI thread... try to reproduce this!
         refresh();
     }
 
@@ -212,7 +212,7 @@ public class HeapHistogramPage extends Composite implements
             return;
         }
 
-        final boolean isVisible = isVisible();
+        final boolean isVisible = isVisible(); // Colin Gordon: BUG.  This method is clearly meant to be safe, but isVisible() is a widget method that throws SWTException.
 
         new RefreshJob(NLS.bind(Messages.refreshMemorySectionJobLabel, section
                 .getJvm().getPid()), getId()) {
