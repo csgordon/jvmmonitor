@@ -385,7 +385,7 @@ public class AttributesTab extends Composite {
          *            The value
          * @return The number
          */
-        protected Number getNumber(Class<?> clazz, String value) {
+        @SafeEffect protected Number getNumber(Class<?> clazz, String value) {
             if (clazz == Byte.class) {
                 return Byte.valueOf(value);
             } else if (clazz == Short.class) {

@@ -161,7 +161,7 @@ public class NotificationFilteredTree extends FilteredTree implements
         }
 
         setColumns(columnsString);
-        configureTree();
+        configureTree(); // Colin Gordon: BUG? This makes direct calls to org.eclipse.swt.widgets.Tree.*, which are all UI methods.  Even if this interface is poly, this object registers itself with the default preferences store, which requires safe listeners.  Unless somehow they ensure the properties are only changed on the UI thread... try to reproduce this!
         getViewer().refresh();
     }
 
@@ -276,7 +276,7 @@ public class NotificationFilteredTree extends FilteredTree implements
      * @param columnData
      *            The column order and visibility
      */
-    private void setColumns(String columnData) {
+    @SafeEffect private void setColumns(String columnData) {
         columns.clear();
         for (String column : columnData.split(",")) { //$NON-NLS-1$
             String[] elemnets = column.split("="); //$NON-NLS-1$
