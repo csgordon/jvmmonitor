@@ -51,3 +51,5 @@ Also discovered the IWorkbench.run(...) method (http://help.eclipse.org/indigo/t
 
 after fixing some jface annotations,
 +20 (5:20), 24.  Mostly from making IPropertyChangeListener polymorphic.
+
++30 (5:50), 19.  mostly backtracking to mark a bunch of obviously safe methods of UITypes (e.g. containing asyncExec) as SafeEffect.

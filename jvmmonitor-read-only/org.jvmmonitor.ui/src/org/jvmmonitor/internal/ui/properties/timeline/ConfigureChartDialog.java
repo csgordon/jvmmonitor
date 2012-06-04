@@ -468,7 +468,7 @@ public class ConfigureChartDialog extends Dialog {
      */
     private ColorSelector createColorSelector(Composite parent) {
         final ColorSelector selector = new ColorSelector(parent);
-        selector.addListener(new IPropertyChangeListener() {
+        selector.addListener(new @UI IPropertyChangeListener() {
             @Override
             public void propertyChange(PropertyChangeEvent event) {
                 IStructuredSelection selection = (IStructuredSelection) attributesViewer

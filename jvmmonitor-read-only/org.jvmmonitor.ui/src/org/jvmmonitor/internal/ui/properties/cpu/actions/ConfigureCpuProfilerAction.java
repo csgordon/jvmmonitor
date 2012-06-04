@@ -28,7 +28,6 @@ import guitypes.checkers.quals.*;
 /**
  * The action to configure CPU profiler.
  */
-@UIType
 public class ConfigureCpuProfilerAction extends Action {
 
     /** The Java packages that CPU profiler profiles. */
@@ -97,7 +96,7 @@ public class ConfigureCpuProfilerAction extends Action {
     /**
      * Opens the dialog.
      */
-    void openDialog() {
+    @UIEffect void openDialog() {
         IActiveJvm jvm = cpuSection.getJvm();
         if (jvm == null) {
             return;
