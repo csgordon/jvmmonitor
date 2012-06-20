@@ -92,7 +92,7 @@ public class CallerCalleeTabPage extends AbstractTabPage {
 
         cpuModelChangeListener = new ICpuModelChangeListener() {
             @Override
-            @UIEffect public void modelChanged(CpuModelEvent event) {
+            @UIEffect public void modelChanged(CpuModelEvent event) { // Colin Gordon: transitively calls Label.setText(), so either this interface is UI or this is a bug
                 if (event.state == CpuModelState.CallersCalleesTargetChanged) {
                     refresh();
                     if (jvm.getCpuProfiler().getCpuModel()

@@ -43,8 +43,7 @@ import guitypes.checkers.quals.*;
 /**
  * The timeline chart.
  */
-@UIType
-public class TimelineChart extends Chart implements IPropertyChangeListener {
+@UIType public class TimelineChart extends Chart implements IPropertyChangeListener {
 
     /** The job to refresh model and UI. */
     private RefreshJob refreshJob;
@@ -101,7 +100,7 @@ public class TimelineChart extends Chart implements IPropertyChangeListener {
         if (IConstants.LEGEND_VISIBILITY.equals(event.getProperty())
                 && !isDisposed()) {
             getLegend().setVisible((Boolean) (event.getNewValue()));
-            redraw(); // Colin Gordon: this method is definitely UI (org.eclipse.swt.widgets.Control.redraw()) but this interface is safe.  Bug, or poly interface?
+            redraw(); // Colin Gordon: BUG: this method is definitely UI (org.eclipse.swt.widgets.Control.redraw()) but 'this' is added as a (safe) property change listener on the global property store by the ctor
         }
     }
 
@@ -381,7 +380,7 @@ public class TimelineChart extends Chart implements IPropertyChangeListener {
     /**
      * The mouse listener to show marker on chart.
      */
-    private class MyMouseListener implements Listener {
+    @UIType private class MyMouseListener implements Listener {
 
         /** The control to add listener. */
         private Control control;

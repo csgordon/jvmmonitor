@@ -207,7 +207,7 @@ abstract public class AbstractFilteredTree extends FilteredTree implements
     /**
      * Configure the given tree.
      */
-    @SafeEffect abstract protected void configureTree(); // Colin Gordon: I could mark this safe, but several subtypes override it with UI
+    abstract protected void configureTree(); // Colin Gordon: I could mark this safe, but several subtypes override it with UI
 
     /**
      * Creates the context menu.

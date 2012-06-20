@@ -36,7 +36,7 @@ public class OperationsContentProvider extends ArrayContentProvider {
      * @param operations
      *            The operations
      */
-    protected void refresh(MBeanOperationInfo[] operations) {
+    @SafeEffect protected void refresh(MBeanOperationInfo[] operations) {
         this.mBeanOperations = operations;
     }
 }
