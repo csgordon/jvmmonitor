@@ -12,10 +12,11 @@ import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 
+import guitypes.checkers.quals.*;
 /**
  * The java monitor perspective factory.
  */
-public class JavaMonitorPerspectiveFactory implements IPerspectiveFactory {
+@UIType public class JavaMonitorPerspectiveFactory implements IPerspectiveFactory {
 
     /** The folder id for navigator views. */
     private static final String ID_NAVIGATOR_FOLDER = "org.jvmmonitor.internal.ui.NavigatorFolderView"; //$NON-NLS-1$
