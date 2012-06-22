@@ -125,7 +125,7 @@ abstract public class AbstractFilteredTree extends FilteredTree implements
      * @see IPropertyChangeListener#propertyChange(PropertyChangeEvent)
      */
     @Override
-    @SafeEffect public void propertyChange(PropertyChangeEvent event) {
+    public void propertyChange(PropertyChangeEvent event) { // Colin Gordon: FP: UI-update-only global prop-change listener
         if (!event.getProperty().equals(getId())
                 || getViewer().getTree().isDisposed()) {
             return;
