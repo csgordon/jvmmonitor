@@ -92,7 +92,7 @@ public class CallerCalleeTabPage extends AbstractTabPage {
 
         cpuModelChangeListener = new ICpuModelChangeListener() {
             @Override
-            @UIEffect public void modelChanged(CpuModelEvent event) { // Colin Gordon: transitively calls Label.setText(), so either this interface is UI or this is a bug
+            @UIEffect public void modelChanged(CpuModelEvent event) { // Colin Gordon: Safe iface, directly calls unsafe SWT methods, installed by parent's setInput()
                 if (event.state == CpuModelState.CallersCalleesTargetChanged) {
                     refresh();
                     if (jvm.getCpuProfiler().getCpuModel()

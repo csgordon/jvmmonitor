@@ -167,7 +167,7 @@ public class HeapHistogramPage extends Composite implements
      * @see IPropertyChangeListener#propertyChange(PropertyChangeEvent)
      */
     @Override
-    @SafeEffect public void propertyChange(PropertyChangeEvent event) {
+    public void propertyChange(PropertyChangeEvent event) { // Colin Gordon: FP: UI-update-only global prop-change listener
         if (!event.getProperty().equals(getId())
                 || heapViewer.getTree().isDisposed()) {
             return;
@@ -206,7 +206,7 @@ public class HeapHistogramPage extends Composite implements
     /**
      * Refreshes the appearance.
      */
-    @SafeEffect public void refresh() {
+    public void refresh() {
         // for dump editor
         if (section == null || isDisposed()) {
             return;

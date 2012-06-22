@@ -136,7 +136,7 @@ public class CpuDumpEditor extends AbstractDumpEditor {
         cpuModel = new CpuModelFactory().createCpuModel();
         cpuModel.addModelChangeListener(new ICpuModelChangeListener() {
             @Override
-            @UIEffect public void modelChanged(CpuModelEvent event) {
+            @UIEffect public void modelChanged(CpuModelEvent event) { // calls refresh(), which def. can't be safe.  Registered by init(), which appears to be called when CPU dump editor is constructed (via super-super-class ctor).  Does the model change event ever actually fire?
                 if (event.state == CpuModelState.CallersCalleesTargetChanged) {
                     refresh();
                     if (cpuModel.getCallersCalleesTarget() != null) {

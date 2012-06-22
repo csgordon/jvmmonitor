@@ -96,7 +96,7 @@ import guitypes.checkers.quals.*;
      * @see IPropertyChangeListener#propertyChange(PropertyChangeEvent)
      */
     @Override
-    @SafeEffect public void propertyChange(PropertyChangeEvent event) {
+    public void propertyChange(PropertyChangeEvent event) { // Colin Gordon: FP: UI-update-only global prop-change listener
         if (IConstants.LEGEND_VISIBILITY.equals(event.getProperty())
                 && !isDisposed()) {
             getLegend().setVisible((Boolean) (event.getNewValue()));
