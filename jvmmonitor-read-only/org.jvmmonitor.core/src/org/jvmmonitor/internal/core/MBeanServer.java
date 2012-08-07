@@ -996,7 +996,7 @@ public class MBeanServer implements IMBeanServer {
      * @throws IOException
      */
     @SuppressWarnings("unchecked")
-    private Object getMXBean(@SuppressWarnings("rawtypes") Class mxBeanClass,
+    private  <T> Object getMXBean(@SuppressWarnings("rawtypes") Class<T> mxBeanClass,
             String mxBeanName) throws IOException {
         Object mxBean = mxBeans.get(mxBeanClass);
         if (mxBean == null && connection != null) {

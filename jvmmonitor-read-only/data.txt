@@ -12,11 +12,6 @@ dist:
 BUILD SUCCESSFUL
 Total time: 0 seconds
 ~/research/experiments/timed/jvmmonitor/jvmmonitor-read-only
-./org.jvmmonitor.core/src/org/jvmmonitor/internal/core/MBeanServer.java:1003: error: incompatible types.
-            mxBean = newPlatformMXBeanProxy(connection, mxBeanName, mxBeanClass);
-                                                                    ^
-  found   : @AlwaysSafe Class<? extends @AlwaysSafe Object>
-  required: @AlwaysSafe Class<@AlwaysSafe Object>
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/memory/HeapHistogramPage.java:170: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe IPropertyChangeListener).
     public void propertyChange(PropertyChangeEvent event) { // Colin Gordon: FP: UI-update-only global prop-change listener
                 ^
@@ -44,4 +39,4 @@ Total time: 0 seconds
 ./org.jvmmonitor.ui/src/org/jvmmonitor/internal/ui/properties/mbean/NotificationFilteredTree.java:152: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe IPropertyChangeListener).
     public void propertyChange(PropertyChangeEvent event) { // Colin Gordon: FP: UI-update-only global prop-change listener
                 ^
-10 errors
+9 errors
