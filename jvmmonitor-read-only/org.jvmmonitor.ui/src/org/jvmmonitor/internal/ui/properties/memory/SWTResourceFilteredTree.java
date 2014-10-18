@@ -33,7 +33,7 @@ import org.eclipse.ui.dialogs.PatternFilter;
 import org.jvmmonitor.core.ISWTResourceElement;
 import org.jvmmonitor.internal.ui.actions.CopyAction;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The thread filtered tree.
  */

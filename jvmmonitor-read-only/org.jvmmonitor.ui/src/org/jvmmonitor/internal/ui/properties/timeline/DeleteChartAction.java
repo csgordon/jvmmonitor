@@ -13,7 +13,7 @@ import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.PlatformUI;
 import org.jvmmonitor.core.IActiveJvm;
 import org.jvmmonitor.internal.ui.properties.AbstractJvmPropertySection;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to delete chart.

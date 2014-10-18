@@ -32,7 +32,7 @@ import org.jvmmonitor.core.cpu.ICpuModelChangeListener;
 import org.jvmmonitor.internal.ui.properties.cpu.actions.ConfigureCpuProfilerAction;
 import org.jvmmonitor.ui.Activator;
 import org.jvmmonitor.ui.ISharedImages;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The call tree tab page.

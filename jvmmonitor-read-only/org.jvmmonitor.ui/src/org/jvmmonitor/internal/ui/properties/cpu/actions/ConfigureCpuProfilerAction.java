@@ -23,7 +23,7 @@ import org.jvmmonitor.core.cpu.ICpuProfiler.ProfilerType;
 import org.jvmmonitor.internal.ui.IConstants;
 import org.jvmmonitor.internal.ui.properties.cpu.CpuSection;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to configure CPU profiler.

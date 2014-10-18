@@ -29,7 +29,7 @@ import org.jvmmonitor.core.JvmModel;
 import org.jvmmonitor.internal.ui.IConstants;
 import org.jvmmonitor.ui.Activator;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The wizard to create a new JVM connection.
  */

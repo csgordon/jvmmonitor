@@ -17,7 +17,7 @@ import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.jvmmonitor.core.IActiveJvm;
 import org.jvmmonitor.internal.ui.properties.AbstractJvmPropertySection;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to invoke MBean method.

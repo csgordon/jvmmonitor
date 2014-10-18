@@ -33,7 +33,7 @@ import org.jvmmonitor.internal.ui.properties.thread.ThreadSashForm;
 import org.jvmmonitor.ui.Activator;
 import org.jvmmonitor.ui.ISharedImages;
 import org.xml.sax.SAXException;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The thread dump editor.

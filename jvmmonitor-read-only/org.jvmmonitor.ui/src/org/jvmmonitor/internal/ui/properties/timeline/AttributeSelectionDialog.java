@@ -33,7 +33,7 @@ import org.eclipse.ui.dialogs.FilteredTree;
 import org.eclipse.ui.dialogs.PatternFilter;
 import org.jvmmonitor.core.IActiveJvm;
 import org.jvmmonitor.internal.ui.IHelpContextIds;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The attribute selection dialog.

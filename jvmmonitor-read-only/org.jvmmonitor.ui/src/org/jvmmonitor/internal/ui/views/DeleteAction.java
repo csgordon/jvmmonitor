@@ -32,7 +32,7 @@ import org.jvmmonitor.core.ISnapshot;
 import org.jvmmonitor.core.ITerminatedJvm;
 import org.jvmmonitor.core.JvmModel;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The action to delete items on JVM Explorer view.
  */

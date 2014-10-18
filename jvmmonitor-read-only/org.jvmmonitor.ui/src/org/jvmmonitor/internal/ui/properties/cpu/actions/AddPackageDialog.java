@@ -37,7 +37,7 @@ import org.eclipse.ui.dialogs.AbstractElementListSelectionDialog;
 import org.jvmmonitor.core.Activator;
 import org.jvmmonitor.internal.ui.properties.cpu.PackageLabelProvider;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The dialog to add Java packages to profiler configuration.
  */

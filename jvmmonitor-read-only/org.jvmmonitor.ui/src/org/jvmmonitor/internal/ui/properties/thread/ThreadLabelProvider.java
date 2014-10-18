@@ -18,7 +18,7 @@ import org.jvmmonitor.internal.ui.IConstants;
 import org.jvmmonitor.internal.ui.properties.overview.IFormat;
 import org.jvmmonitor.ui.Activator;
 import org.jvmmonitor.ui.ISharedImages;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The label provider for thread viewer.

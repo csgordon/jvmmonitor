@@ -12,7 +12,7 @@ import org.eclipse.core.runtime.Status;
 import org.jvmmonitor.internal.ui.actions.AbstractClearAction;
 import org.jvmmonitor.internal.ui.properties.cpu.CpuSection;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The action to clear CPU profiling data.
  */

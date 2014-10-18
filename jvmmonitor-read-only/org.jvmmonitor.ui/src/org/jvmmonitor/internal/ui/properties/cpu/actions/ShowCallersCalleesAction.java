@@ -14,7 +14,7 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.jvmmonitor.core.cpu.ICpuModel;
 import org.jvmmonitor.core.cpu.IMethodNode;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to show the callers/callees of selected method.

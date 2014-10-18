@@ -21,7 +21,7 @@ import org.jvmmonitor.internal.ui.IConstants;
 import org.jvmmonitor.internal.ui.properties.AbstractJvmPropertySection;
 import org.jvmmonitor.ui.Activator;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The abstract class for action related to chart set management.
  */

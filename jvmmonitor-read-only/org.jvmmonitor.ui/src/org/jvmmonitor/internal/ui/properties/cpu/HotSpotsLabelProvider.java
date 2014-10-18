@@ -12,7 +12,7 @@ import org.eclipse.swt.widgets.Tree;
 import org.jvmmonitor.core.cpu.ICpuModel;
 import org.jvmmonitor.core.cpu.IMethodNode;
 import org.jvmmonitor.core.cpu.IThreadNode;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The hot spot label provider.

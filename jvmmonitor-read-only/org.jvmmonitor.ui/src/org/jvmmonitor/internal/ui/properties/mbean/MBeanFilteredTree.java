@@ -18,7 +18,7 @@ import org.eclipse.ui.dialogs.FilteredTree;
 import org.eclipse.ui.dialogs.PatternFilter;
 import org.jvmmonitor.internal.ui.properties.AbstractJvmPropertySection;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The MBean filtered tree.
  */

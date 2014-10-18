@@ -11,7 +11,7 @@ import org.eclipse.swt.graphics.Image;
 import org.jvmmonitor.internal.ui.properties.mbean.MBeanLabelProvider;
 import org.jvmmonitor.ui.Activator;
 import org.jvmmonitor.ui.ISharedImages;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The attribute label provider.

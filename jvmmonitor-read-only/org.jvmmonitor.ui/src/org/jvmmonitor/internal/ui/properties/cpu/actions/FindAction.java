@@ -10,7 +10,7 @@ import org.eclipse.jface.action.Action;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.ui.IWorkbenchCommandConstants;
 import org.jvmmonitor.internal.ui.properties.cpu.AbstractFilteredTree.ViewerType;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The action to find tree item.
  */

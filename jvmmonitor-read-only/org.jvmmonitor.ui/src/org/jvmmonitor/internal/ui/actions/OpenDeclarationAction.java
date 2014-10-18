@@ -57,7 +57,7 @@ import org.eclipse.ui.texteditor.ITextEditor;
 import org.jvmmonitor.core.IHeapElement;
 import org.jvmmonitor.core.cpu.IMethodNode;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to open method declaration with Java editor.

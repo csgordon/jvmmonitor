@@ -13,7 +13,7 @@ import org.eclipse.swt.widgets.Tree;
 import org.jvmmonitor.core.cpu.ICallTreeNode;
 import org.jvmmonitor.core.cpu.ICpuModel;
 import org.jvmmonitor.core.cpu.IThreadNode;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The call tree label provider.

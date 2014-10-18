@@ -8,7 +8,7 @@ package org.jvmmonitor.internal.ui;
 
 import java.util.List;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The columns that are configurable to change the column order and visibility.
  * The configured settings remain even after restarting eclipse.

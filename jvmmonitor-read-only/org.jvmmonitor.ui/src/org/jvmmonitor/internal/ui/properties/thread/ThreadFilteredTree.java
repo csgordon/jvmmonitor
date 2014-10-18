@@ -33,7 +33,7 @@ import org.jvmmonitor.internal.ui.actions.ConfigureColumnsAction;
 import org.jvmmonitor.internal.ui.actions.CopyAction;
 import org.jvmmonitor.ui.Activator;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The thread filtered tree.
  */

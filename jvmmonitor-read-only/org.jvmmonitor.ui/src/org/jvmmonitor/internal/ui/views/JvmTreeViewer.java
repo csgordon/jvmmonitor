@@ -43,7 +43,7 @@ import org.jvmmonitor.core.cpu.ICpuProfiler.ProfilerState;
 import org.jvmmonitor.internal.ui.RefreshJob;
 import org.jvmmonitor.internal.ui.actions.CopyAction;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The tree viewer on JVM Monitor view.
  */
