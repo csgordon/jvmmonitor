@@ -38,7 +38,7 @@ import org.swtchart.ISeries.SeriesType;
 import org.swtchart.ISeriesSet;
 import org.swtchart.Range;
 import org.swtchart.internal.PlotArea;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The timeline chart.

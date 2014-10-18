@@ -35,7 +35,7 @@ import org.jvmmonitor.internal.ui.properties.AbstractSashForm;
 import org.jvmmonitor.internal.ui.properties.StackTraceViewer;
 import org.jvmmonitor.ui.Activator;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The SWT resource page.
  */

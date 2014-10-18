@@ -12,7 +12,7 @@ import org.eclipse.swt.graphics.Image;
 import org.jvmmonitor.core.ISWTResourceElement;
 import org.jvmmonitor.internal.ui.IConstants;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The label provider for SWT resources viewer extending LabelProvider to change

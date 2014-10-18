@@ -70,7 +70,7 @@ import org.jvmmonitor.internal.ui.properties.cpu.actions.FindAction;
 import org.jvmmonitor.ui.Activator;
 import org.jvmmonitor.ui.ISharedImages;
 import org.xml.sax.SAXException;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The CPU dump editor.

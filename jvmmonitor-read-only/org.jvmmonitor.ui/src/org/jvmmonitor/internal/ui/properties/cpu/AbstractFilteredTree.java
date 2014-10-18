@@ -44,7 +44,7 @@ import org.jvmmonitor.internal.ui.properties.cpu.actions.FindAction;
 import org.jvmmonitor.internal.ui.properties.cpu.actions.FocusOnAction;
 import org.jvmmonitor.internal.ui.properties.cpu.actions.ShowCallersCalleesAction;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The abstract filtered tree.

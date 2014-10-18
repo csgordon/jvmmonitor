@@ -30,7 +30,7 @@ import org.jvmmonitor.internal.ui.properties.AbstractJvmPropertySection;
 import org.jvmmonitor.internal.ui.properties.timeline.ConfigureChartDialog;
 import org.jvmmonitor.internal.ui.properties.timeline.MBeanAttribute;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to show in timeline tab.

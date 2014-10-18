@@ -64,7 +64,7 @@ import org.jvmmonitor.core.JvmCoreException;
 import org.jvmmonitor.internal.ui.IHelpContextIds;
 import org.jvmmonitor.internal.ui.actions.CopyAction;
 import org.jvmmonitor.internal.ui.properties.PropertiesColumn;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The invoke dialog.

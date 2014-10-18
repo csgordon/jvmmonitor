@@ -21,7 +21,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.jvmmonitor.core.mbean.IMonitoredMXBeanGroup.AxisUnit;
 import org.swtchart.ISeries;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The marker showing the rectangle symbols and tooltip on chart.
  */

@@ -21,7 +21,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.ide.IDE;
 import org.jvmmonitor.core.ISnapshot;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to open snapshot.

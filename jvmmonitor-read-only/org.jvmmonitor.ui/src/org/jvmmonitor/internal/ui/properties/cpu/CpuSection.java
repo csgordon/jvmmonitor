@@ -47,7 +47,7 @@ import org.jvmmonitor.internal.ui.properties.cpu.actions.ResumeCpuProfilingActio
 import org.jvmmonitor.internal.ui.properties.cpu.actions.SuspendCpuProfilingAction;
 import org.jvmmonitor.ui.Activator;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The CPU section.
  */

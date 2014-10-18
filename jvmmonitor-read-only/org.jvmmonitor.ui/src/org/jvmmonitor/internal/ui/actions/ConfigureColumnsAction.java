@@ -9,7 +9,7 @@ package org.jvmmonitor.internal.ui.actions;
 import org.eclipse.core.runtime.Assert;
 import org.eclipse.jface.action.Action;
 import org.jvmmonitor.internal.ui.IConfigurableColumns;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to configure columns.

@@ -12,7 +12,7 @@ import org.eclipse.jface.action.Action;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.jvmmonitor.ui.Activator;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The action to collapse all tree nodes.
  */

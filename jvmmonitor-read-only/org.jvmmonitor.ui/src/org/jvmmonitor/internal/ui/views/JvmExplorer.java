@@ -18,7 +18,7 @@ import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributo
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 import org.jvmmonitor.internal.ui.IHelpContextIds;
 import org.jvmmonitor.internal.ui.actions.PreferencesAction;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The JVM explorer view.

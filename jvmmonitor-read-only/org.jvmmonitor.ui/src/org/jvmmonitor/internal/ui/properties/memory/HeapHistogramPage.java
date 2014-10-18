@@ -49,7 +49,7 @@ import org.jvmmonitor.internal.ui.actions.CopyAction;
 import org.jvmmonitor.internal.ui.actions.OpenDeclarationAction;
 import org.jvmmonitor.internal.ui.actions.RefreshAction;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The heap histogram page.

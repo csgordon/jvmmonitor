@@ -9,7 +9,7 @@ package org.jvmmonitor.internal.ui.properties.mbean;
 import javax.management.MBeanOperationInfo;
 
 import org.eclipse.jface.viewers.ArrayContentProvider;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The operations content provider.
  */

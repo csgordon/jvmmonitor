@@ -23,7 +23,7 @@ import org.jvmmonitor.internal.ui.RefreshJob;
 import org.jvmmonitor.internal.ui.properties.AbstractJvmPropertySection;
 import org.jvmmonitor.internal.ui.properties.AbstractSashForm;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The sash form to show thread and stack traces.
  */

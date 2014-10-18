@@ -28,7 +28,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.preferences.ViewSettingsDialog;
 import org.jvmmonitor.internal.ui.IConfigurableColumns;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The dialog to configure columns.

@@ -20,7 +20,7 @@ import org.jvmmonitor.internal.ui.actions.ToggleOrientationAction;
 import org.jvmmonitor.internal.ui.actions.ToggleOrientationAction.ISashForm;
 import org.jvmmonitor.internal.ui.actions.ToggleOrientationAction.Orientation;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The abstract sash form with orientation actions.
  */

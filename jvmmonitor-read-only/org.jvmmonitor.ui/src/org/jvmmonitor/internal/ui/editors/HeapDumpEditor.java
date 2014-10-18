@@ -33,7 +33,7 @@ import org.jvmmonitor.internal.ui.properties.memory.IHeapInput;
 import org.jvmmonitor.ui.Activator;
 import org.jvmmonitor.ui.ISharedImages;
 import org.xml.sax.SAXException;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The heap dump editor.

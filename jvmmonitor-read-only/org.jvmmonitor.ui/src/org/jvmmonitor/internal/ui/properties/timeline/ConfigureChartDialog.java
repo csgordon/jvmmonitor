@@ -42,7 +42,7 @@ import org.jvmmonitor.core.IActiveJvm;
 import org.jvmmonitor.core.mbean.IMonitoredMXBeanGroup;
 import org.jvmmonitor.core.mbean.IMonitoredMXBeanGroup.AxisUnit;
 import org.jvmmonitor.internal.ui.IHelpContextIds;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The configure chart dialog.

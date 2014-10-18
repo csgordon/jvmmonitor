@@ -37,7 +37,7 @@ import org.eclipse.ui.dialogs.SelectionDialog;
 import org.jvmmonitor.core.cpu.ICpuProfiler.ProfilerState;
 import org.jvmmonitor.core.cpu.ICpuProfiler.ProfilerType;
 import org.jvmmonitor.internal.ui.properties.cpu.PackageLabelProvider;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The CPU profiler configuration.

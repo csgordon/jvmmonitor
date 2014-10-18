@@ -22,7 +22,7 @@ import org.jvmmonitor.core.mbean.IMonitoredMXBeanGroup;
 import org.jvmmonitor.internal.ui.properties.AbstractJvmPropertySection;
 import org.jvmmonitor.ui.Activator;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The action to save chart set as given name.
  */

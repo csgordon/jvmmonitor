@@ -12,7 +12,7 @@ import org.jvmmonitor.core.cpu.ICallTreeNode;
 import org.jvmmonitor.core.cpu.ICpuModel;
 import org.jvmmonitor.internal.ui.properties.cpu.AbstractFilteredTree;
 import org.jvmmonitor.internal.ui.properties.cpu.AbstractFilteredTree.ViewerType;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to focus on frame or thread.

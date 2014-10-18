@@ -19,7 +19,7 @@ import org.jvmmonitor.core.ITerminatedJvm;
 import org.jvmmonitor.ui.Activator;
 import org.jvmmonitor.ui.ISharedImages;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The label provider for JVMs tree viewer.
  */

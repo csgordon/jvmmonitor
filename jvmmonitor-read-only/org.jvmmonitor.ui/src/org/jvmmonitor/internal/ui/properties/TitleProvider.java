@@ -9,7 +9,7 @@ package org.jvmmonitor.internal.ui.properties;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.jvmmonitor.core.IActiveJvm;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The label provider contributing to the extension point

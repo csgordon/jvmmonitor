@@ -15,7 +15,7 @@ import org.eclipse.ui.part.EditorActionBarContributor;
 import org.jvmmonitor.internal.ui.actions.ToggleOrientationAction;
 import org.jvmmonitor.internal.ui.actions.ToggleOrientationAction.Orientation;
 import org.jvmmonitor.internal.ui.properties.thread.ThreadSashForm;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The thread action contributor.

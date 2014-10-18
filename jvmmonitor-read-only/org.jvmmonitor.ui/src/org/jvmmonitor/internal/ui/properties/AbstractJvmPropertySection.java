@@ -49,7 +49,7 @@ import org.jvmmonitor.core.JvmModelEvent;
 import org.jvmmonitor.core.JvmModelEvent.State;
 import org.jvmmonitor.internal.ui.actions.PreferencesAction;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The abstract property section for JVM.

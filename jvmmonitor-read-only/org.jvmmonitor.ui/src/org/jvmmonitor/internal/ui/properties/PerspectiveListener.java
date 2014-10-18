@@ -13,7 +13,7 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.part.IPageSite;
 import org.eclipse.ui.views.properties.PropertySheet;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The perspective listener.
  */

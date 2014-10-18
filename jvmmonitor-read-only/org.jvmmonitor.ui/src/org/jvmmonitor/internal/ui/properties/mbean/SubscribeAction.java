@@ -20,7 +20,7 @@ import org.jvmmonitor.core.IActiveJvm;
 import org.jvmmonitor.core.JvmCoreException;
 import org.jvmmonitor.internal.ui.properties.AbstractJvmPropertySection;
 import org.jvmmonitor.ui.Activator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The action to subscribe notification.

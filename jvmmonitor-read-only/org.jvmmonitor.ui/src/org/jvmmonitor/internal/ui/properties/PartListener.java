@@ -13,7 +13,7 @@ import org.eclipse.ui.views.properties.tabbed.ISection;
 import org.eclipse.ui.views.properties.tabbed.TabContents;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * The part listener.
  */
